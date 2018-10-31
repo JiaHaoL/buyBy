@@ -1,0 +1,18 @@
+{
+    "name": "classapp_study",
+    "viewUrl": "classapp/stuStudy/template.html",
+    "controllerUrl": "classapp/stuStudy/controller.js",
+    "config": 
+    {
+            "contentName": "content",
+            "modalName":"modal",
+            "getSubjectSortbypidURL":"http://scapp.sjedu.cn/Class_App_Old/json/ResAttr_getSubjectBypid_getSubjectSortbypid.json",
+            "findbysubjecturl":"http://scapp.sjedu.cn/Class_App_Old/json/Open_queryForList_findResAttrByTreeid.json",
+            "findContentTypeurl":"http://scapp.sjedu.cn/Class_App_Old/json/ResAttr_getContenttype_getContentType.json",
+            "findxkmoreurl":"http://scapp.sjedu.cn/Class_App_Old/json/ResAttr_getXuekemore_getXuekemore.json",
+            "downloadurl":"json/Download_download_download.json",
+            "findTeacherGrade":"json/Open_queryForList_findTeacherGrade.json",
+            "findTeacherLesson":"json/Open_queryForList_findTeacherLesson.json",
+            "getSubjectSortbypidTwoURL":"http://scapp.sjedu.cn/Class_App_Old/json/Open_queryForList_getSubjectSortbypid.json"
+	}
+}

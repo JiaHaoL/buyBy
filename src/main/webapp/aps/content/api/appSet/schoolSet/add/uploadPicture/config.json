@@ -1,0 +1,15 @@
+{
+    "name": "uploadPicture",
+    "viewUrl": "aps/content/api/appSet/schoolSet/add/uploadPicture/template.html",
+    "controllerUrl": "aps/content/api/appSet/schoolSet/add/uploadPicture/controller.js",
+    "config": 
+    {			"uploadurl":"http://rescenter.sjedu.cn/ResCenter/upload/Upload_fileUploadDomain_fileUploadDomain.json",
+    			"addURL": "json/Open_insert_insertSchoolLogInfo.json",
+           		"menu":{
+	            "buttons":
+	            [
+		        	
+				]
+			}
+	}
+}

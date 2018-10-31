@@ -1,0 +1,13 @@
+{
+    "name": "classSet",
+    "viewUrl": "aps/content/api/classSet/list/template.html",
+    "controllerUrl": "aps/content/api/classSet/list/controller.js",
+    "config": 
+    {
+             "findURL":"json/Open_queryForList_selectInterfaceList.json",
+             "findByIdURL":"json/Open_queryForObject_selectInterfaceByPk.json",
+             "findParamsListURL":"json/Open_queryForList_selectParamsListByInter.json",
+             "getResultURL":"json/GetResult_getResult_data.json"
+            
+	}
+}

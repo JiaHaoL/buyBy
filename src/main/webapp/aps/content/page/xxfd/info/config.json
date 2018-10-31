@@ -1,0 +1,21 @@
+{
+    "name": "cms_document_info",
+    "viewUrl": "aps/content/page/xxfd/info/template.html",
+    "controllerUrl": "aps/content/page/xxfd/info/controller.js",
+    "config": 
+    {
+            "findByIdURL": "json/Open_queryForObject_xxfdFindById.json",
+            "updateURL": "json/Open_update_xxfdUpdate.json",
+            "MsgUserInsertURL":"json/Open_insert_MsgUserInsert.json",
+            "menu":{
+	            "buttons":[
+		        	{
+		            	"buttonName":"返回",
+		            	"buttonStyle":"default",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_info.close"
+		        	}
+				]
+			}
+	}
+}

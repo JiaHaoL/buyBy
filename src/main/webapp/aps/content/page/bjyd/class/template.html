@@ -1,0 +1,60 @@
+
+<form class="form-inline" style="margin-bottom:10px;float: left;">
+  <div class="form-group">
+    <select class="form-control" ng-model="form.STATE">
+	  <option value="0">待审核</option>
+	  <option value="1">审核通过</option>
+	  <option value="2">审核不通过</option>
+	</select>
+  </div>
+  
+  <div class="form-group">
+    <input type="text" class="form-control"  ng-model="form.TITLE" placeholder="标题">
+  </div>
+ 
+  <button type="submit" class="btn btn-default" ng-click="select()"> <span class="glyphicon glyphicon-search"></span> 查询 </button>
+</form>
+  
+<!-- Table -->
+<table class="table table-hover ">
+<thead>
+  <tr>
+    <th style="width: 20px;"><input type="checkbox" class="isCheckll" ng-click="checkAll($event.target)" /></th>
+       <th column="TITLE" ng-click="order($event.target)">标题</th>
+       <th column="STUDENT_NAME" ng-click="order($event.target)">作者</th>
+       <th column="REPLY" ng-click="order($event.target)">回复</th>
+       <th column="STATE" ng-click="order($event.target)">审核状态</th>
+       <th column="CREATETIME" ng-click="order($event.target)">发表时间</th>
+     </tr>
+   </thead>
+   <tbody ng-switch on="page.current_num">
+   	<tr ng-switch-when="0">
+   		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+   	</tr>
+     <tr ng-repeat='row in dataList'>
+       <td><input type="checkbox" name="dataPk" value="{{row.PK_CLASSPLOT}}" /></td>
+       <td><a ng-click="findBjydInfo(row)" >{{row.TITLE }}</a></td>
+       <td>{{row.STUDENT_NAME }}</td>
+       <td>{{row.REPLY }}</td>
+       <td ng-switch on="row.STATE">
+       <a ng-click="findBjydInfo(row)" >
+		<span ng-switch-when="0">待审核</span>
+		<span ng-switch-when="1">审核通过</span>
+		<span ng-switch-when="2">审核不通过</span>
+		<span ng-switch-when="3">暂存</span>
+	    <span ng-switch-default></span>
+	   </a>
+	   </td>
+       <td>{{row.CREATETIME | date:'yyyy-MM-dd'  }}</td>
+     </tr>
+    
+   </tbody>
+   <tfoot>
+   	<tr>
+   		<td colspan="100">
+   		<div ng-include="'html/page.html'"></div>
+	</td>
+   	</tr>
+   </tfoot>
+</table>
+ 

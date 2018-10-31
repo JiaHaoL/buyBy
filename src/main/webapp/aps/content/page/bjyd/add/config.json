@@ -1,0 +1,26 @@
+{
+    "name": "cms_document_add",
+    "viewUrl": "aps/content/page/bjyd/add/template.html",
+    "controllerUrl": "aps/content/page/bjyd/add/controller.js",
+    "config": 
+    {
+            "addURL": "json/Open_insert_bjydInsert.json",
+            "findStudentURL": "json/Open_queryForList_findStudentByClassId.json",
+            "menu":{
+	            "buttons":[
+		        	{
+		            	"buttonName":"发表",
+		            	"buttonStyle":"primary",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_add.send"
+		        	},
+		        	{
+		            	"buttonName":"取消",
+		            	"buttonStyle":"default",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_add.close"
+		        	}
+				]
+			}
+	}
+}

@@ -1,0 +1,39 @@
+<form class="form-horizontal form-horizontal-condensed" >
+    <div class="form-group">
+		<label class="col-sm-3 control-label"> &nbsp; 编号：</label> 
+		<div class="col-sm-8">
+		<input not-null="yes" class="form-control" type="text" ng-model="form.ASSET_CODE">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-3 control-label"> &nbsp; 名称：</label> 
+		<div class="col-sm-8">
+		<input not-null="yes" class="form-control" type="text" ng-model="form.ASSET_NAME">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-3 control-label"> &nbsp; 规格型号：</label> 
+		<div class="col-sm-8">
+		<input not-null="yes" class="form-control" type="text" ng-model="form.STANDARD">
+		</div>
+	</div>
+	
+   	<div class="form-group">
+		<label class="col-sm-3 control-label">资产类型:</label> 
+		<div class="col-sm-8">
+		<select not-null="yes" class="form-control" ng-model="form.ASSET_TYPE" ng-options="asset.ASSET_TYPE as asset.ASSET_TYPE_NAME for asset in assetList">
+			<option value="">--请选择--</option>
+		</select>
+		</div>
+	</div>
+
+    <div class="form-group">
+		<label class="col-sm-3 control-label"> &nbsp; 备注：</label> 
+		<div class="col-sm-8">
+		<textarea not-null="yes" class="form-control" type="text" ng-model="form.REMARKS"></textarea>
+		</div>
+	</div>
+	
+</form>

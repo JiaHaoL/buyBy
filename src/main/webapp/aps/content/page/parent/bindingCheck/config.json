@@ -1,0 +1,10 @@
+{
+    "name": "app_page_parent_bindingCheck",
+    "viewUrl": "aps/content/page/parent/bindingCheck/template.html",
+    "controllerUrl": "aps/content/page/parent/bindingCheck/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_bindingCheckList.json",
+            "infoURL": "aps/content/page/parent/info/config.json"
+	}
+}

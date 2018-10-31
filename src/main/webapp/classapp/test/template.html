@@ -1,0 +1,121 @@
+
+<div style="line-height: 50px;border-bottom: 1px solid #d2d2d2;background: #F7F7F7 left -53px repeat-x;padding: 20px;" >
+	<h5 style="margin-bottom: 10px;">条件筛选：{{text}}</h5>
+	<div id="filter">  
+        <dl>  
+            <dt style="font-weight: bold;margin-left: 5px;margin-right: 8px;">{{text1}}：</dt> 
+            <dd ng-repeat='first in firstList'><div><a style="margin-right: 10px;padding:5px;" ng-click='shaixuanclick1(first)' ng-class="first.isSelect" >{{first.G_NODE_TEXT}}</a></div></dd>  
+        </dl>  
+        <dl id="version" style="margin-bottom: 30px;">  
+            <dt style="font-weight: bold;margin-left: 5px;margin-right: 8px;">{{text2}}：</dt>
+            <dd><div><a id="all2" ng-click='shaixuanclick2(2)' style="margin-right: 10px;padding:5px;">全部</a></div></dd>   
+            <dd ng-repeat='second in secondList'><div><a style="margin-right: 10px;padding:5px;" ng-click='shaixuanclick2(second)' ng-class="second.isSelect">{{second.G_NODE_TEXT}}</a></div></dd>  
+            
+        </dl> 
+        <dl id="sxcontent">  
+            <dt style="font-weight: bold;margin-left: 5px;margin-right: 8px;">{{text3}}：</dt>  
+            <dd><div><a id="all3" ng-click='shaixuanclick3(3)' style="margin-right: 10px;padding:5px;">全部</a></div></dd>  
+            <dd ng-repeat='third in thirdList' ><div><a style="margin-right: 10px;padding:5px;" ng-click='shaixuanclick3(third)' ng-class="third.isSelect">{{third.G_NODE_TEXT}}</a></div></dd>  
+        </dl> 
+	</div>
+</div>
+
+<table style="width: 100%" >
+	<tr>
+		<td class="leftMenu" valign="top" width=300px style="width: 300px;BORDER-RIGHT: #999999 1px dashed;padding:10px;">
+			<ul id="subtree" class="ztree" style="width:300px; overflow:auto; "></ul>
+		</td>
+		
+		
+		<td style="padding:15px;" valign="top">
+			    
+		 <!-- ul class="nav nav-tabs">
+		  <li role="presentation" class="active" id="content_all" ng-click="tabClick(1)"><a>全部</a></li>
+		  <li role="presentation" ng-repeat='content in contentlist' ng-click="tabClick(content)" ng-class="content.isSelect"><a>{{content.TITLE}}</a></li>
+		  </ul>
+		<br/-->
+		
+		<div style="padding-bottom: 10px;padding-bottom: 50px;">
+			<div class="input-group" style="width:240px;float: left;">
+			  <input type="text" class="form-control" ng-model="form.restitle" placeholder="根据名称查询" aria-describedby="basic-addon2">
+			  <span class="input-group-addon" id="basic-addon2" ng-click="searcher();"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+		</div>
+		     
+		<div style="float: right;display:none;" class="subject_button">
+			  <button type="button" style="margin-right:8px;display:none；" class="btn btn-primary" id="btn_upload" ng-click="uploadclick();"><span class="glyphicon glyphicon-upload"></span> 上传</button>
+			  <!--  <button type="button" style="margin-right:8px;" class="btn btn-success" id="btn_upload" ng-click="shareclick();"><span class="glyphicon glyphicon-cloud-upload"></span>分享</button> -->
+			    
+			  <button ng-repeat='btn in buttonData  | filter :{ CONTROLLER_NAME:CheckControllerName } | orderBy: "BUTTON_CODE"' 
+				ng-click="clickButton(btn)" style="margin-right:8px;" type="button" class="btn btn-{{btn.BUTTON_STYLE }} {{btn.BUTTON_STATUS}}">
+				 <span class="glyphicon glyphicon-{{btn.BUTTON_IMG }}"></span> {{btn.BUTTON_NAME }} 
+			  </button>
+		  </div>
+		</div>
+		
+		<div class="panel panel-default">
+		
+		
+		 <table class="table table-hover tableListModel" >
+      
+      <tbody ng-switch on="page.current_num">
+      	<tr ng-switch-when="0">
+      		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+      	</tr>
+        <tr ng-repeat='row in resattrlist'>
+          <td style="padding:10px;">
+			 <table>
+			 	<tr>
+			 		<td rowspan="3" style="width:80px;height:90px;padding-right: 10px;" ><a href="" ng-click="viewclick(row)"><img  class="img-thumbnail" ng-src="http://rescenter.sjedu.cn/ResCenter/{{row.bgurl}}" style="width:70px;height:90px;"></a></td>
+			 		<td valign="middle"><h5>标题：<a href="" ng-click="viewclick(row)" style="font-weight:bold;">{{row.TITLE}}</a></h5></td>
+			 	</tr>
+			 	
+			 	<tr>
+			 		<td valign="middle">描述：{{row.DESCRIPTION }}</td>
+			 	</tr>
+			 	
+			 	<tr>
+			 		<td valign="middle" style="color: #888;">
+			 		文件格式：<span style="color: #3c763d;">{{row.EXTNAME }}</span>&nbsp;
+			 		文件大小：<span style="color: #31708f;">{{row.FILE_SIZE }}</span> &nbsp; 
+			 		上传时间：{{row.MTIME }} &nbsp;  
+			 		下载量：<span style="color: #3c763d;">{{row.DOWNMUM }}</span></td>
+			 	</tr>
+			 </table>
+          </td>
+          
+          <td style="width: 120px;padding:15px;">
+          	<table style="border-left: 1px solid #ddd;height:48px;margin-top: 25px;" >
+			 	<tr>
+			 		<td valign="top" style="padding-left: 32px;">
+			 		<a href="javascript:void(0)" ng-click="he({{row}})" ><span class="glyphicon glyphicon-download-alt" aria-hidden="true" style="font-size: 24px;"></span></a>
+			 		</td>
+			 	</tr>
+			 	<tr>
+			 		<td valign="bottom" style="padding-left: 20px;">
+			 		  点击下载
+			 		</td>
+			 	</tr>
+			 </table>
+			 
+          </td>
+        </tr>
+       
+      </tbody>
+      <tfoot>
+      	<tr>
+      		<td colspan="100" style="padding: 0px;padding-top: 15px;">
+      		<div ng-include="'html/page.html'"></div>
+			</td>
+      	</tr>
+      </tfoot>
+    </table>
+		
+		
+		 </div>   
+		</td>
+	</tr>
+</table>
+<!--  <div app-part src="'aps/content/jxzy/update/config.json'"></div> -->
+
+  
+

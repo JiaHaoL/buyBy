@@ -1,0 +1,42 @@
+<form class="form-inline" style="margin: 15px;">
+		
+  		
+</form>
+ 
+<div class="panel panel-info" style="margin: 20px;">
+ <!-- Table -->
+ <table class="table table-hover table-striped table-bordered ">  
+      <thead>
+        <tr>
+          <th style="width: 50px;">选择</th>
+          <th column="UNIT_NAME" class="sorting" ng-click="order($event.target)">班级名称</th>
+          <th column="CLASS_NAME" class="sorting" ng-click="order($event.target)">班主任</th>
+          <th column="CLASS_MOTTO" class="sorting" ng-click="order($event.target)">班级座右铭</th>
+       	  <!-- <th column="" class="sorting" ng-click="order($event.target)">操作</th> -->
+       </tr>
+      </thead>
+      <tbody ng-switch on="page.current_num">
+      	<tr ng-switch-when="0">
+      		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+      	</tr>
+        <tr ng-repeat='data in dataList'>
+			<td>
+			<input type="checkbox" name="dataPk" value="{{data.CLASS_PK}}">
+			</td>
+			<td>{{data.CLASS_BJ}}</td>
+			<td>{{data.CLASS_BZR}}</td>
+			<td>{{data.CLASS_MOTTO}}</td>
+			<!-- <td>
+				<a ng-click="info(data.CLASS_INFO_PK)"><span class="glyphicon glyphicon-search"></span>查看详情</a> 
+			</td> -->
+		</tr>
+      </tbody>
+      <tfoot>
+      	<tr>
+      		<td colspan="100">
+      		<div ng-include="'html/page.html'"></div>
+			</td>
+      	</tr>
+      </tfoot>
+    </table>
+</div>

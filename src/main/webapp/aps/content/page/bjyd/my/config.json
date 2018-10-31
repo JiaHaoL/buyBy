@@ -1,0 +1,10 @@
+{
+    "name": "app_page_bjyd_my",
+    "viewUrl": "aps/content/page/bjyd/my/template.html",
+    "controllerUrl": "aps/content/page/bjyd/my/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_bjydMyList.json",
+            "infoURL": "aps/content/page/bjyd/info/config.json"
+	}
+}

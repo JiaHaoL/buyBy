@@ -1,0 +1,12 @@
+{
+    "name": "app_page_bjxc_class",
+    "viewUrl": "aps/content/page/bjxc/class/template.html",
+    "controllerUrl": "aps/content/page/bjxc/class/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_bjxcList.json",
+            "findResTypeURL": "json/Open_queryForList_findResTypeList.json",
+            "infoURL": "aps/content/page/bjxc/info/config.json",
+            "deleteURL": "json/Open_delete_bjxcDelete.json"
+	}
+}

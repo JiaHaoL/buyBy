@@ -1,0 +1,9 @@
+{
+    "name": "app_page_columnReport_classx",
+    "viewUrl": "aps/content/page/columnReport/classX/template.html",
+    "controllerUrl": "aps/content/page/columnReport/classX/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_findclassXReportList.json"
+	}
+}

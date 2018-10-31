@@ -1,0 +1,74 @@
+<table style="width:95%;">
+	<tr>
+		<td valign="top">
+			作者：{{form.STUDENT_NAME }}  &nbsp; &nbsp; &nbsp; 
+			发表时间：{{form.CREATETIME | date:'yyyy-MM-dd'  }}
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top">
+			<div ng-bind-html="form.CONTENT | trustHtml"></div>
+		</td>
+	</tr>
+	
+</table>
+
+<br/>
+
+<table style="width: 95%">
+	<tr ng-repeat="reply in replys | filter :{ FATHER_CLASSPLOTREPLY : 'ROOT' } | orderBy: 'CREATETIME' " style="border-top:1px solid #e5e5e5 ">
+		<td valign="top">
+			<table style="float: left;">
+				<tr>
+					<td valign="top" style="padding-top: 10px;padding-bottom: 5px;text-align: center;">
+					<img class="img-thumbnail" width="64" height="64" src="assets/img/student2.png" />
+					<h5>{{reply.PK_USERNAME }}</h5>
+					</td>
+					
+					<td valign="top" style="font-size: 14px;">
+					<div class="page-header" style="padding: 0px;margin: 0px;margin-left: 10px;">
+					  <h5>{{$index+1 }} 楼  <small>回复时间：{{reply.CREATETIME | date:'yyyy-MM-dd'  }}</small></h5>
+					</div>
+					<p style="margin-left: 10px;margin-top:5px;font-size: 14px;"> {{reply.CONTENT }}</p>
+					
+					<table class="alert alert-success" style="min-width: 600px;margin: 10px;" ng-repeat="reply2 in replys | filter :{ FATHER_CLASSPLOTREPLY : reply.PK_CLASSPLOTREPLY } | orderBy: 'CREATETIME' ">
+						<tr>
+							<td rowspan="2" style="padding: 5px;" width="40px;"><img class="img-thumbnail" width="32" height="32" src="assets/img/student2.png" /></td>
+							<td style="text-align: left;padding-top: 5px;"><strong>{{reply2.PK_USERNAME }}</strong> {{reply2.CONTENT }}</td>
+						</tr>
+						<tr>
+							<td style="text-align: left;padding-bottom: 5px;">{{reply2.CREATETIME | date:'yyyy-MM-dd'  }}</td>
+						</tr>
+					</table>
+					
+					<p style="margin-left: 10px;margin-top:5px;font-size: 14px;display: none;" class="REPLYP{{reply.PK_CLASSPLOTREPLY }}">
+					<textarea class="form-control REPLYTEXT{{reply.PK_CLASSPLOTREPLY }}" style="width: 600px;height: 50px;" rows="2"></textarea>
+					<button style="width: 50px;height: 50px;" type="button" class="btn btn-success btn-xs" ng-click="replySubmitBtn(reply)"> 提交 </button>
+					</p>
+					
+					</td>
+				</tr>
+				
+			</table>
+			<button style="float: right;margin-top: 5px;" type="button" class="btn btn-info btn-xs" ng-click="replyBtn(reply)" > 回复 </button>
+		</td>
+	</tr>
+</table>
+
+<br/>
+
+<table style="width: 95%">
+	<tr>
+		<td valign="top">
+			<h5>发表评论：</h5>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+		<textarea class="form-control" ng-model="replyForm.CONTENT" style="width: 850px" rows="3"></textarea>
+		</td>
+	</tr>
+</table>
+  
+

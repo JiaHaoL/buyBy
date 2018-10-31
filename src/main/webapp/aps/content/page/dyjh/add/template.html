@@ -1,0 +1,44 @@
+<table >
+	<tr>
+		<td class="eWebEditor1" valign="top">
+		<form class="form-inline" style="margin-bottom: 10px;">
+		  <div class="form-group has-feedback ">
+		    <label>标题：</label>
+		    <input type="text" style="width: 800px;" not-null="yes" ng-model="form.TITLE" class="form-control" />
+		  </div>
+		</form>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="eWebEditor1" valign="top">
+		<form class="form-inline" style="margin-bottom: 10px;">
+		  <div class="form-group has-feedback ">
+		    <label>发布类型：</label>
+		    <select class="form-control"  ng-model="form.PUBLICFLAG" style="width: 200px;" >
+           		<option value="0">不公开</option>
+           		<option value="1">班内公开</option>
+           		<option value="2">校内公开</option>
+           		<option value="3">区内公开</option>
+           	</select>
+		  </div>
+		  <div class="form-group has-feedback ">
+		    <label> &nbsp; 提问老师：</label>
+           	<select class="form-control" ng-model="form.PK_TEACHERINFO" 
+		      	ng-options="teacher.USER_PK as teacher.USER_SN for teacher in teachersData ">
+				  <option value="">--请选择--</option>
+			  </select>
+		  </div>
+		</form>
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top">
+		<INPUT type="hidden" name="content1" value="">
+		<IFRAME ID="eWebEditor1" width="850" height="650" src="http://portal.sjedu.cn/ewebeditor/ewebeditor.htm?id=content1&style=coolblue" frameborder="0" scrolling="no" ></IFRAME>
+		</td>
+	</tr>
+</table>
+  
+

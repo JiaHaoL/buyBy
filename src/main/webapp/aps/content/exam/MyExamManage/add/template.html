@@ -1,0 +1,47 @@
+<form class="form-inline">
+	<div class="form-group">
+		<label class=""> &nbsp; 评测类型：</label> 
+		<select class="form-control" 
+			ng-model="form.EXAMTYPEID" ng-options="examType.EXAMTYPEID as examType.EXAMTYPE for examType in ExamTypeList">
+			<option value="">--请选择--</option>
+		</select>
+	</div>
+	
+<!-- 	<div class="form-group">
+		<label class=""> &nbsp; 年级：</label> 
+		<select class="form-control" ng-change="gradeChange()" id="GradeSelect"
+			ng-model="form.GRADE_CODE" ng-options="grade.GRADE_CODE as grade.GRADE_NAME for grade in GradeList">
+			<option value="">--请选择--</option>
+		</select>
+	</div> -->
+	
+	<div class="form-group">
+		<label class=""> &nbsp; 评测名称：</label>
+		<input not-null="yes"  class="form-control" type="text" ng-model="form.EXAMNAME">
+	</div>
+		
+</form>
+<br/>
+<div class="panel panel-default">
+	<div class="panel-heading">请选择此次评测的班级
+	<input style="margin-left:5px;" type="checkbox" id="allClassCheckBox" ng-click="allClassClick()">全选\全不选
+	<input style="margin-left:5px;" type="button" ng-click="reverseClassClick()" value="反选">
+	
+	</div>
+	<div   class="panel-body"  >
+		<div   class="col-sm-6 col-md-4 pull-left" ng-repeat="(key,class) in ClassList" >
+			<input name="sc_Classinfo_checkbox"  type="checkbox" value="{{class.CLASS_PK}}" > {{class.CLASS_BJ}}
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">请选择此次评测的科目
+	</div>
+	<div class="panel-body">
+		<div   class="col-sm-2 col-md-2 pull-left" ng-repeat="(key,course) in CourseList" >
+				<!-- <input  name="sc_Courseinfo_checkbox"  type="checkbox" value="{{course.COURSEID}}" cname="{{course.COURSENAME}}"> {{course.COURSENAME}} -->
+				<input  name="sc_Courseinfo_checkbox"  type="radio" value="{{course.COURSEID}}" cname="{{course.COURSENAME}}"> {{course.COURSENAME}}
+		</div>
+	</div>
+</div>

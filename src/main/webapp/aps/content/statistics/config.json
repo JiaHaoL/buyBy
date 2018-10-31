@@ -1,0 +1,9 @@
+{
+    "name": "statistics",
+    "viewUrl": "aps/content/statistics/template.html",
+    "controllerUrl": "aps/content/statistics/controller.js",
+    "config": 
+    {
+    		"TrafficStatistics":"json/Open_queryForList_getTrafficStatisticsInfo.json"
+	}
+}

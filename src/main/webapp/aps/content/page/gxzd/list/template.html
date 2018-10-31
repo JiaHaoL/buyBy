@@ -1,0 +1,48 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+
+
+<form class="form-inline" style="margin-bottom:10px;float: left;">
+  
+  <div class="form-group">
+    <input type="text" class="form-control"  ng-model="form.TITLE" placeholder="内容">
+  </div>
+ 
+  <button type="submit" class="btn btn-default" ng-click="select()"> <span class="glyphicon glyphicon-search"></span> 查询 </button>
+</form>
+  
+<!-- Table -->
+<table class="table table-hover ">
+<thead>
+  <tr>
+       <th column="CONTENT" ng-click="order($event.target)">内容</th>
+       <th column="PK_TEACHER" ng-click="order($event.target)">辅导教师</th>
+       <th column="PK_TEACHER" ng-click="order($event.target)">教师身份</th>
+       <th column="CREATE_TIME" ng-click="order($event.target)">辅导日期</th>
+       <th >操作</th>
+     </tr>
+   </thead>
+   <tbody ng-switch on="page.current_num">
+   	<tr ng-switch-when="0">
+   		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+   	</tr>
+     <tr ng-repeat='row in dataList'>
+       <td><a ng-click="findBjydInfo(row)" >{{row.CONTENT }}</a></td>
+       <td>{{row.PK_TEACHER }}</td>
+       <td>{{row.PK_TEACHER }}</td>
+       <td>{{row.CREATETIME | date:'yyyy-MM-dd'  }}</td>
+       <td></td>
+     </tr>
+    
+   </tbody>
+   <tfoot>
+   	<tr>
+   		<td colspan="100">
+   		<div ng-include="'html/page.html'"></div>
+	</td>
+   	</tr>
+   </tfoot>
+</table>
+
+  </div>
+</div>

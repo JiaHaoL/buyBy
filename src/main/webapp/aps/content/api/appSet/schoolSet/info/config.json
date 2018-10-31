@@ -1,0 +1,14 @@
+{
+    "name": "schoolSet_info",
+    "viewUrl": "aps/content/api/appSet/schoolSet/info/template.html",
+    "controllerUrl": "aps/content/api/appSet/schoolSet/info/controller.js",
+    "config": 
+    {
+           "findByIdURL":"json/Open_queryForObject_findSchoolInfoByPk.json",
+           "menu":{	
+		    "buttons":[
+			    	
+			]
+		}
+	}
+}

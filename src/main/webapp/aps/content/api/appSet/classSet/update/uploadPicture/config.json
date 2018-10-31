@@ -1,0 +1,17 @@
+{
+    "name": "classSet_update_uploadPicture",
+    "viewUrl": "aps/content/api/appSet/classSet/update/uploadPicture/template.html",
+    "controllerUrl": "aps/content/api/appSet/classSet/update/uploadPicture/controller.js",
+    "config": 
+    {			"uploadurl":"http://rescenter.sjedu.cn/ResCenter/upload/Upload_fileUploadDomain_fileUploadDomain.json",
+    			"updateURL": "json/Open_update_updateClassLogInfo.json",
+    			"findAllClassURL":"json/Open_queryForList_findAllClassList.json",
+    			"findByIdURL":"json/Open_queryForObject_findClassInfoByPk.json",
+           		"menu":{
+	            "buttons":
+	            [
+		        	
+				]
+			}
+	}
+}

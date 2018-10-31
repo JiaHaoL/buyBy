@@ -1,0 +1,10 @@
+{
+    "name": "honorsTypeManage",
+    "viewUrl": "aps/content/api/appSet/honorsTypeManage/list/template.html",
+    "controllerUrl": "aps/content/api/appSet/honorsTypeManage/list/controller.js",
+    "config": 
+    {
+             "findURL":"json/Open_queryForList_findHonorsTypeList.json",
+             "deleteURL":"json/Open_delete_deleteHonorsType.json"
+	}
+}

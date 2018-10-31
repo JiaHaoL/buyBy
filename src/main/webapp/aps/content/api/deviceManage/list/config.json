@@ -1,0 +1,11 @@
+{
+    "name": "deviceManage",
+    "viewUrl": "aps/content/api/deviceManage/list/template.html",
+    "controllerUrl": "aps/content/api/deviceManage/list/controller.js",
+    "config": 
+    {
+             "findDeviceManageinfoURL":"json/Open_queryForList_findDeviceManageinfo.json",
+             "deleteDeviceinfoURL":"json/Open_update_deleteDeviceManageinfo.json"
+            
+	}
+}

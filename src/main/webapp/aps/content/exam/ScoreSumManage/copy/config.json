@@ -1,0 +1,31 @@
+{
+    "name": "ScoreSumManage_copy",
+    "viewUrl": "aps/content/exam/ScoreSumManage/copy/template.html",
+    "controllerUrl": "aps/content/exam/ScoreSumManage/copy/controller.js",
+    "config": 
+    {
+            "findExamListURL": "json/Open_queryForList_findExaminfoByPKSchool.json",
+ 			"findSubmitExamStuCourseListURL":"json/Open_queryForList_findSubmitExamStuCourseList.json",
+ 			"findStuCourseListURL":"json/Open_queryForList_findStuCourseList.json",
+ 			"copyScoreSumURL":"json/Exam_insert_copyScoreSum.json",
+ 			
+            "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"ScoreSumManage_copy.close"
+		        	},
+		        	{
+		            	"buttonName":"复制",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"ScoreSumManage_copy.save"
+		        	}
+				]
+			}
+	}
+}

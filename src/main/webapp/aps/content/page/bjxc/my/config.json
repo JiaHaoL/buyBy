@@ -1,0 +1,10 @@
+{
+    "name": "app_page_bjxc_my",
+    "viewUrl": "aps/content/page/bjxc/my/template.html",
+    "controllerUrl": "aps/content/page/bjxc/my/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_bjxcMyList.json",
+            "infoURL": "aps/content/page/bjxc/info/config.json"
+	}
+}

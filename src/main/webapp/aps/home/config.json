@@ -1,0 +1,11 @@
+{
+    "name": "app_home",
+    "viewUrl": "aps/home/template.html",
+    "controllerUrl": "aps/home/controller.js",
+    "config": 
+    {
+            "contentName": "content",
+            "modalName":"modal",
+            "defaultAppPartSrc":"aps/content/welcome/config.json"
+	}
+}

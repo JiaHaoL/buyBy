@@ -1,0 +1,9 @@
+{
+    "name": "myReady",
+    "viewUrl": "aps/content/lesson/ready/list/template.html",
+    "controllerUrl": "aps/content/lesson/ready/list/controller.js",
+    "config": 
+    {
+         
+	}
+}

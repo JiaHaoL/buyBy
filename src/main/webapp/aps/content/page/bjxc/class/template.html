@@ -1,0 +1,49 @@
+<p style="text-align: center;width: 100%;margin-top: 10px;">
+
+<span class="btn btn-default" ng-click="findByType(null)">全部</span>
+
+<span ng-repeat='dic in typesData' ng-click="findByType(dic.DICTIONARY_PK)" class="btn btn-default" style="margin-right: 10px;">{{dic.DICTIONARY_NAME}}</span>
+
+</p>
+
+<div class="row" style="margin-top: 40px;">
+  <div class="col-xs-3" ng-repeat='row in dataList' style="text-align: center;">
+    <div class="img-thumbnail" style="margin-bottom: 30px;display:table;margin-left: auto;margin-right: auto;">
+  
+      <div style="width: 200px;height: 240px;margin-left: auto;margin-right: auto;display:table-cell;vertical-align:middle;">
+      	<img ng-click="openPic(row)" ng-src="http://rescenter.sjedu.cn/ResCenter/upload/Download_downloadPicThumbnailForApp_data.json?type=2&filelinkid={{row.PHONE_PATH }}" 
+      	style=" max-width: 200px;max-height: 150px;overflow: hidden; display: block;margin-left: auto;margin-right: auto;" ng-click="update(row.PK_CLASSPHOTO)">
+      
+      	<div class="caption">
+        <h5><input type="checkbox" name="dataPk" value="{{row.PK_CLASSPHOTO}}" /> {{row.FILENAME }}</h5>
+        <p>{{row.DESCRIPTION }}</p>
+        <p>
+        {{row.PK_USER_NAME }} &nbsp; {{row.CREATETIME | date:'yyyy-MM-dd'  }}
+        <br/>
+        {{row.PK_CLASSINFO_NAME }} &nbsp; <span class="label label-primary">{{row.PK_PHOTOTYPE_NAME }}</span>
+        </p>
+      </div >
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+  
+<div ng-include="'html/page.html'"></div>
+
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{openBigTitle}}</h4>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+      <img style="max-width: 100%;max-height: 640px;margin-left: auto;margin-right: auto;" alt="正在加载..." ng-src="{{openBigSrc}}" >
+      </div>
+    </div>
+  </div>
+</div>
+

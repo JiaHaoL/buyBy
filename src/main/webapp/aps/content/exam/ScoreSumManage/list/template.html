@@ -1,0 +1,57 @@
+
+	<form class="form-inline" style="margin: 15px;">
+		<div class="form-group">
+			<label class=""> &nbsp; 评测列表：</label> 
+			<select class="form-control" ng-model="form.EXAMID"  ng-options="Examinfo.EXAMID as Examinfo.EXAMNAME for Examinfo in ExamList" ng-click="examListChange()">
+				<option  value="">--请选择--</option>
+			</select>
+		</div>
+
+<!-- 		<div class="form-group">
+			<label class=""> &nbsp; 科目：</label> 
+			<select class="form-control" ng-model="form.FK_COURSE" ng-options="Courseinfo.FK_COURSE as Courseinfo.COURSENAME for Courseinfo in CourseList">
+				<option  value="">--请选择--</option>
+			</select>
+		</div> -->
+		
+		<button type="button" class="btn btn-default" ng-click="select()">
+  		<span class="glyphicon glyphicon-search" aria-hidden="true"></span> 查询 
+  		</button>
+  		
+</form>
+		 
+		 		<div class="panel panel-info" style="margin: 20px 20px" >
+    		 <!-- Table -->
+			 <table class="table table-hover table-striped table-bordered ">  
+			      <thead>
+			        <tr>
+			        <th style="width: 50px;">选择</th>
+			          <th column="EXAMNAME" class="sorting" ng-click="order($event.target)">评测名称</th>
+			          <th column="COURSENAME" class="sorting" ng-click="order($event.target)">科目</th>
+			          <th column="SCORESUMNAME" class="sorting" ng-click="order($event.target)">分项名称</th>
+			          <th column="SUMSCORE" class="sorting" ng-click="order($event.target)">分项分数</th>
+		        </tr>
+			      </thead>
+			      <tbody ng-switch on="page.current_num">
+			      	<tr ng-switch-when="0">
+			      		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+			      	</tr>
+			        <tr ng-repeat='data in dataList'>
+			         <td>
+				       <input type="checkbox" name="dataPk" value="{{data.SCORESUMID}}">
+	                 </td>
+	                 <td>{{data.EXAMNAME}}</td>
+	                 <td>{{data.COURSENAME}}</td>
+	                 <td>{{data.SCORESUMNAME}}</td>
+	                 <td>{{data.SUMSCORE}}</td>
+			        </tr>
+			      </tbody>
+			      <tfoot>
+				      	<tr>
+				      		<td colspan="100">
+				      		<div ng-include="'html/page.html'"></div>
+							</td>
+				      	</tr>
+				  </tfoot>
+			    </table>
+   		</div>

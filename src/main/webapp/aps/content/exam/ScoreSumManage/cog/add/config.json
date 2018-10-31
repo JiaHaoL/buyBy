@@ -1,0 +1,28 @@
+{
+    "name": "ScoreLevelCog_add",
+    "viewUrl": "aps/content/exam/ScoreSumManage/cog/add/template.html",
+    "controllerUrl": "aps/content/exam/ScoreSumManage/cog/add/controller.js",
+    "config": 
+    {
+ 			"saveScoreLevelURL":"json/Open_insert_inserScoreLevel.json",
+ 			"findScoreSumByIdURL":"json/Open_queryForObject_findScoreSumById.json",
+            "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"ScoreLevelCog_add.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"ScoreLevelCog_add.save"
+		        	}
+				]
+			}
+	}
+}

@@ -1,0 +1,31 @@
+{
+    "name": "cms_document_review",
+    "viewUrl": "aps/content/page/bjyd/review/template.html",
+    "controllerUrl": "aps/content/page/bjyd/review/controller.js",
+    "config": 
+    {
+            "findByIdURL": "json/Open_queryForObject_bjydFindById.json",
+            "updateURL": "json/Open_update_bjydUpdate.json",
+            "menu":{
+	            "buttons":[
+		        	{
+		            	"buttonName":"通过",
+		            	"buttonStyle":"success",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_review.success"
+		        	},{
+		            	"buttonName":"不通过",
+		            	"buttonStyle":"warning",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_review.faile"
+		        	},
+		        	{
+		            	"buttonName":"返回",
+		            	"buttonStyle":"default",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_review.close"
+		        	}
+				]
+			}
+	}
+}

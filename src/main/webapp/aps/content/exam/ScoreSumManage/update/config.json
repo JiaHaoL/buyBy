@@ -1,0 +1,31 @@
+{
+    "name": "ScoreSumManage_update",
+    "viewUrl": "aps/content/exam/ScoreSumManage/update/template.html",
+    "controllerUrl": "aps/content/exam/ScoreSumManage/update/controller.js",
+    "config": 
+    {
+            "findByIdURL": "json/Open_queryForObject_findScoreSumById.json",
+            "findExamListURL": "json/Open_queryForList_findExaminfoByPKSchool.json",
+ 			"findSubmitExamStuCourseListURL":"json/Open_queryForList_findSubmitExamStuCourseList.json",
+ 			"findStuCourseListURL":"json/Open_queryForList_findStuCourseList.json",
+ 			"updataScoreSumURL":"json/Open_update_updateScoreSum.json",
+              "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"ScoreSumManage_update.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"ScoreSumManage_update.save"
+		        	}
+				]
+			}
+	}
+}

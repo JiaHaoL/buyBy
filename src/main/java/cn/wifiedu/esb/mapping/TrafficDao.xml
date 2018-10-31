@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="TrafficDao" >
+  <resultMap id="BaseResultMap" type="java.util.HashMap" ></resultMap>
+  <parameterMap id="BaseParameterMap" type="java.util.HashMap" ></parameterMap>
+  
+  <select id="getTrafficStatisticsInfo" resultMap="BaseResultMap" parameterMap="BaseParameterMap">
+  	SELECT 
+		groupid,
+		groupname,
+		appid,
+		appname,
+		totalrateavg,
+		inrateavg,
+		outrateavg,
+		totalratepeak,
+		totalratepeak_time,
+		inratepeak,
+		inratepeak_time,
+		outratepeak,
+		outratepeak_time
+	FROM flowstatistics
+	where 1=1
+	<if test="appid != null and appid != '' ">
+		AND appid = #{appid}
+	</if>
+	<if test="groupid != null and groupid != '' ">
+		AND groupid = #{groupid}
+	</if>
+	<if test="appname != null and appname != '' ">
+		AND appname like concat('%',#{appname},'%')
+	</if>
+	<if test="groupname != null and groupname != '' ">
+		AND groupname like concat('%',#{groupname},'%')
+	</if>
+	order by appid,groupid,totalratepeak_time,outratepeak_time
+  </select>
+  
+    <select id="getTrafficStatisticsInfoSize" resultType="java.lang.Integer" parameterMap="BaseParameterMap">
+  	SELECT 
+		count(1)
+	FROM flowstatistics
+	where 1=1
+	<if test="appid != null and appid != '' ">
+		AND appid = #{appid}
+	</if>
+	<if test="groupid != null and groupid != '' ">
+		AND groupid = #{groupid}
+	</if>
+	<if test="appname != null and appname != '' ">
+		AND appname like concat('%',#{appname},'%')
+	</if>
+	<if test="groupname != null and groupname != '' ">
+		AND groupname like concat('%',#{groupname},'%')
+	</if>
+  </select>
+  
+  <select id="getTrafficScanningInfo" resultMap="BaseResultMap" parameterMap="BaseParameterMap">
+  	SELECT 
+		groupid,
+		groupname,
+		totalratepeak,
+		totalratepeak_time,
+		inratepeak,
+		inratepeak_time,
+		outratepeak,
+		outratepeak_time,
+		syntotalpeak,
+		syntotalpeak_time,
+		syninpeak,
+		syninpeak_time,
+		synoutpeak,
+		synoutpeak_time,
+		tcpscantotalpeak,
+		tcpscantotalpeak_time,
+		tcpscaninpeak,
+		tcpscaninpeak_time,
+		tcpscanoutpeak,
+		tcpscanoutpeak_time
+ 	FROM peakrate_frequency
+ 	where 1=1
+ 	<if test="appid != null and appid != '' ">
+		AND appid = #{appid}
+	</if>
+	<if test="groupid != null and groupid != '' ">
+		AND groupid = #{groupid}
+	</if>
+	<if test="appname != null and appname != '' ">
+		AND appname like concat('%',#{appname},'%')
+	</if>
+	<if test="groupname != null and groupname != '' ">
+		AND groupname like concat('%',#{groupname},'%')
+	</if>
+	order by groupid
+  </select>
+  
+  <select id="getTrafficScanningInfoSize" resultType="java.lang.Integer" parameterMap="BaseParameterMap">
+  	SELECT 
+		count(1)
+ 	FROM peakrate_frequency
+ 	where 1=1
+ 	<if test="appid != null and appid != '' ">
+		AND appid = #{appid}
+	</if>
+	<if test="groupid != null and groupid != '' ">
+		AND groupid = #{groupid}
+	</if>
+	<if test="appname != null and appname != '' ">
+		AND appname like concat('%',#{appname},'%')
+	</if>
+	<if test="groupname != null and groupname != '' ">
+		AND groupname like concat('%',#{groupname},'%')
+	</if>
+  </select>
+  
+  </mapper>

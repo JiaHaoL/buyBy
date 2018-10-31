@@ -1,0 +1,12 @@
+{
+    "name": "classapp_test_studentTj",
+    "viewUrl": "classapp/studentTj/template.html",
+    "controllerUrl": "classapp/studentTj/controller.js",
+    "config": 
+    {
+            "findClassStuInfoURL":"json/StudentTj_getStudentTj_data.json",
+            "findClassStuInfoAllURL":"json/StudentTj_getStudentTjAll_data.json",
+            "findClassStuInfoNormURL":"json/StudentTj_getStudentTj_data.json",
+            "findClassStuInfoAllNromURL":"json/StudentTj_getStudentTjAllNorm_data.json"
+	}
+}

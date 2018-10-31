@@ -1,0 +1,12 @@
+{
+    "name": "app_page_xxll_list",
+    "viewUrl": "aps/content/page/xxll/list/template.html",
+    "controllerUrl": "aps/content/page/xxll/list/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_xxllList.json",
+            "infoURL": "aps/content/page/xxll/info/config.json",
+            "updateStatusURL": "json/Open_update_xxllUpdate.json",
+            "deleteURL": "json/Open_update_xxllDelete.json"
+	}
+}

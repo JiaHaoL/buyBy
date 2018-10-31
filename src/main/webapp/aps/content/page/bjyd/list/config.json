@@ -1,0 +1,10 @@
+{
+    "name": "app_page_bjyd_list",
+    "viewUrl": "aps/content/page/bjyd/list/template.html",
+    "controllerUrl": "aps/content/page/bjyd/list/controller.js",
+    "config": 
+    {
+            "defaultURL": "aps/content/page/bjyd/class/config.json",
+            "listURL": "aps/content/page/bjyd/my/config.json"
+	}
+}

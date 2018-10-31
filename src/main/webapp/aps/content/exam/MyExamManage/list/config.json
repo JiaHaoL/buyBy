@@ -1,0 +1,14 @@
+{
+    "name": "MyExamManage",
+    "viewUrl": "aps/content/exam/MyExamManage/list/template.html",
+    "controllerUrl": "aps/content/exam/MyExamManage/list/controller.js",
+    "config": 
+    {
+             "findExaminfoListURL":"json/Open_queryForList_findExaminfoList.json",
+             "findUpdateExamInitURL":"json/Exam_query_findUpdateExamInit.json",
+             "deleteExaminfoURL":"json/Open_update_deleteExaminfo.json",
+             "findGradeListURL":"json/Open_queryForList_findGradeList.json",
+             "findCourseListURL":"json/Open_queryForList_findCourseList.json",
+             "findExamTypeListURL":"json/Open_queryForList_findExamTypeList.json"
+	}
+}

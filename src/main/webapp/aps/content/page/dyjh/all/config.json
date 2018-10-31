@@ -1,0 +1,10 @@
+{
+    "name": "app_page_dyjh_all",
+    "viewUrl": "aps/content/page/dyjh/all/template.html",
+    "controllerUrl": "aps/content/page/dyjh/all/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_dyjhList.json",
+            "infoURL": "aps/content/page/dyjh/info/config.json"
+	}
+}

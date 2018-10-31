@@ -1,0 +1,20 @@
+{
+    "name": "cms_document_info",
+    "viewUrl": "aps/content/page/parent/info/template.html",
+    "controllerUrl": "aps/content/page/parent/info/controller.js",
+    "config": 
+    {
+            "findByIdURL": "json/Open_queryForObject_parentFindById.json",
+            "updatePhoneURL": "json/Open_update_parentUpdatePhone.json",
+            "menu":{
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_info.close"
+		        	}
+				]
+			}
+	}
+}

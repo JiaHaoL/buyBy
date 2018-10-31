@@ -1,0 +1,35 @@
+{
+    "name": "masterManage_add",
+    "viewUrl": "aps/content/api/masterManage/add/template.html",
+    "controllerUrl": "aps/content/api/masterManage/add/controller.js",
+    "config": 
+    {
+    		  "findAssetByURL":"json/Open_queryForList_findAssetAllList.json",
+    		  "findDeviceURL":"json/Open_queryForList_findDeviceByList.json",
+    		  "findTempURL":"json/Open_queryForList_findTempByList.json",
+    		  "findSnmpURL":"json/Open_queryForList_findSnmpByList.json",
+    		  "findCertURL":"json/Open_queryForList_findCertByList.json",
+    		  "findEncryURL":"json/Open_queryForList_findEncryByList.json",
+              "addMasterURL":"json/Open_insert_insertMasterManage.json",
+             
+              "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"masterManage_add.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"masterManage_add.save"
+		        	}
+				]
+			}
+			
+	}
+}

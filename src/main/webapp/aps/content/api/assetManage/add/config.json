@@ -1,0 +1,30 @@
+{
+    "name": "assetManage_add",
+    "viewUrl": "aps/content/api/assetManage/add/template.html",
+    "controllerUrl": "aps/content/api/assetManage/add/controller.js",
+    "config": 
+    {
+    		  "findAssetURL":"json/Open_queryForList_findAssetByList.json",
+              "addAssetURL":"json/Open_insert_insertAssetManage.json",
+             
+              "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"assetManage_add.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"assetManage_add.save"
+		        	}
+				]
+			}
+			
+	}
+}

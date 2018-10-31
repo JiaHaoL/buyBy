@@ -1,0 +1,21 @@
+<form class="form-horizontal form-horizontal-condensed" >
+	<div class="form-group">
+		<label class="col-sm-3 control-label"> &nbsp; 原评测：</label> 
+		<div class="col-sm-8">
+		<select not-null="yes" class="form-control" ng-model="form.OLDEXAMID" disabled="true"
+		 ng-options="Examinfo.EXAMID as Examinfo.EXAMNAME for Examinfo in ExamList">
+			<option value="">--请选择--</option>
+		</select>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-3 control-label"> &nbsp; 现评测：</label> 
+		<div class="col-sm-8">
+		<select not-null="yes" class="form-control" ng-model="form.EXAMID" 
+		 ng-options="Examinfo.EXAMID as Examinfo.EXAMNAME for Examinfo in ExamList">
+			<option value="">--请选择--</option>
+		</select>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,16 @@
+<table style="width:95%;min-height: 480px;">
+	<tr>
+		<td valign="top" style="height: 30px;">
+			作者：{{form.HOMEWORK_ADDER_NAME }}  &nbsp; &nbsp; &nbsp; 
+			发表时间：{{form.CREATE_TIME | date:'yyyy-MM-dd'  }}
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top">
+			<div ng-bind-html="form.HOME_CONTENT | trustHtml"></div>
+		</td>
+	</tr>
+	
+</table>
+

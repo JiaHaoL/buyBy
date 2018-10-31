@@ -1,0 +1,21 @@
+{
+    "name": "ScoreLevelManage",
+    "viewUrl": "aps/content/exam/ScoreSumManage/cog/template.html",
+    "controllerUrl": "aps/content/exam/ScoreSumManage/cog/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_findScoreLevelList.json",
+            "UpdateScoreLevelURL":"json/Open_update_deleteLevel.json",
+             "menu":{
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"ScoreLevelManage.close"
+		        	}
+				]
+			}
+	}
+}

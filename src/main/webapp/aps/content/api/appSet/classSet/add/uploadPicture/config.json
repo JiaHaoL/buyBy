@@ -1,0 +1,16 @@
+{
+    "name": "classSet_uploadPicture",
+    "viewUrl": "aps/content/api/appSet/classSet/add/uploadPicture/template.html",
+    "controllerUrl": "aps/content/api/appSet/classSet/add/uploadPicture/controller.js",
+    "config": 
+    {			"uploadurl":"http://rescenter.sjedu.cn/ResCenter/upload/Upload_fileUploadDomain_fileUploadDomain.json",
+    			"addURL": "json/Open_insert_insertClassLogInfo.json",
+    			"findAllClassURL":"json/Open_queryForList_findAllClassList.json",
+           		"menu":{
+	            "buttons":
+	            [
+		        	
+				]
+			}
+	}
+}

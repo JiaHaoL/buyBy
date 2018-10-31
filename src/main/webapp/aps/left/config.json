@@ -1,0 +1,11 @@
+{
+    "name": "app_left",
+    "viewUrl": "aps/left/template.html",
+    "controllerUrl": "aps/left/controller.js",
+    "config": 
+    {
+           "getUserInfoURL":"json/Api_queryForObject_userInfo.json",
+           "menuListData": "json/Api_queryForList_UserRightMenu.json",
+           "logoutURL":"logout.jsp"
+	}
+}

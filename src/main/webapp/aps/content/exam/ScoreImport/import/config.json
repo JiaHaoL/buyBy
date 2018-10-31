@@ -1,0 +1,33 @@
+{
+    "name": "ScoreImport_import",
+    "viewUrl": "aps/content/exam/ScoreImport/import/template.html",
+    "controllerUrl": "aps/content/exam/ScoreImport/import/controller.js",
+    "config": 
+    {
+            "ImportDataUploadURL": "json/Exam_insert_importExamStuScoreList.json",
+            "findExamListURL": "json/Open_queryForList_findExaminfoByPKSchool.json",
+ 			"findStuCourseListURL":"json/Open_queryForList_findSubmitExamStuCourseList.json",
+ 			"findExamClassListURL":"json/Open_queryForList_findExamClassList.json",
+ 			"findScoreSumImportListURL":"json/Open_queryForList_findScoreSumImportList.json",
+            
+            
+         	 "menu":{	
+	              "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"ScoreImport_import.close"
+		        	},
+		        	{
+		            	"buttonName":"导入",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"ScoreImport_import.save"
+		        	}
+		        ]
+			}
+	}
+}

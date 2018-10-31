@@ -1,0 +1,31 @@
+{
+    "name": "deviceManage_update",
+    "viewUrl": "aps/content/api/deviceManage/update/template.html",
+    "controllerUrl": "aps/content/api/deviceManage/update/controller.js",
+    "config": 
+    {			
+    		"findSchoolURL":"json/Open_queryForList_findAllSchoolList.json",
+    		 "findGradeNameByURL":"json/Open_queryForList_findGradeByList.json",
+             "findClassByGradeURL":"json/Open_queryForList_findClassByList.json",
+            "findDeviceManageURL":"json/Open_queryForObject_findDeviceManageList.json",
+            "updateDeviceManageURL":"json/Open_update_updateDeviceManageResult.json",
+            "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"deviceManage_update.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"deviceManage_update.save"
+		        	}
+				]
+			}
+	}
+}

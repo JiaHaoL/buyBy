@@ -1,0 +1,17 @@
+{
+    "name": "ScoreImport",
+    "viewUrl": "aps/content/exam/ScoreImport/list/template.html",
+    "controllerUrl": "aps/content/exam/ScoreImport/list/controller.js",
+    "config": 
+    {
+            
+            "findExamListURL": "json/Open_queryForList_findExaminfoByPKSchool.json",
+ 			"findSubmitExamStuCourseListURL":"json/Open_queryForList_findSubmitExamStuCourseList.json",
+ 			"findStuCourseListURL":"json/Open_queryForList_findSubmitExamStuCourseList.json",
+ 			"findExamClassListURL":"json/Open_queryForList_findExamClassList.json",
+ 			"findScoreSumImportListURL":"json/Open_queryForList_findScoreSumImportList.json",
+ 			"deleteScoreSumImportURL":"json/Exam_delete_deleteScoreSumImport.json",
+ 			"exportExamStuListURL":"json/Exam_query_exportExamStuList.json"
+ 			
+	}
+}

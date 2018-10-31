@@ -1,0 +1,34 @@
+{
+    "name": "MyExamManage_update",
+    "viewUrl": "aps/content/exam/MyExamManage/update/template.html",
+    "controllerUrl": "aps/content/exam/MyExamManage/update/controller.js",
+    "config": 
+    {
+            "addExamInitURL":"json/Exam_query_addExamInit.json",
+            "findClassListbyGradeURL":"json/Open_queryForList_findClassListbyGrade.json",
+            "findUpdateExamInitURL":"json/Exam_query_findUpdateMyExamInit.json",
+            "addExaminfoURL":"json/Exam_insert_addExaminfo.json",
+            "deleteExaminfoURL":"json/Exam_delete_deleteExaminfo.json",
+            "updateMyExaminfoURL":"json/Exam_update_updateMyExaminfo.json",
+            "findClassByTeacherURL":"json/Open_queryForList_findClassListByTeacher.json",
+             
+            "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"MyExamManage_update.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"MyExamManage_update.save"
+		        	}
+				]
+			}
+	}
+}

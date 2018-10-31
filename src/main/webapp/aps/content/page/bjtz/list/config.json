@@ -1,0 +1,12 @@
+{
+    "name": "app_page_bjtz_list",
+    "viewUrl": "aps/content/page/bjtz/list/template.html",
+    "controllerUrl": "aps/content/page/bjtz/list/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_bjtzList.json",
+            "infoURL": "aps/content/page/bjtz/info/config.json",
+            "updateStatusURL": "json/Open_update_bjtzUpdate.json",
+            "deleteURL": "json/Open_update_bjtzDelete.json"
+	}
+}

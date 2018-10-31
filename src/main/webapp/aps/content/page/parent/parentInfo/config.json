@@ -1,0 +1,10 @@
+{
+    "name": "app_page_parent_list",
+    "viewUrl": "aps/content/page/parent/parentInfo/template.html",
+    "controllerUrl": "aps/content/page/parent/parentInfo/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_parentList.json",
+            "infoURL": "aps/content/page/parent/info/config.json"
+	}
+}

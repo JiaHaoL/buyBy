@@ -1,0 +1,31 @@
+{
+    "name": "classSet_add",
+    "viewUrl": "aps/content/api/appSet/classSet/add/template.html",
+    "controllerUrl": "aps/content/api/appSet/classSet/add/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_findAllUnitList.json",
+            "findRuleURL": "json/Open_queryForList_BaseFindRule.json",
+            "getClassZymURL":"json/Open_queryForList_getClassZym.json",
+            "addClassMottor":"json/Open_insert_addClassMottor.json",
+            "updateClassMottor":"json/Open_update_updateClassMottor.json",
+             "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"classSet_add.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"classSet_add.save"
+		        	}
+				]
+			}
+	}
+}

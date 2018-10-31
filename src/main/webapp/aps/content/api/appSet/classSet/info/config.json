@@ -1,0 +1,9 @@
+{
+    "name": "classSet_info",
+    "viewUrl": "aps/content/api/appSet/classSet/info/template.html",
+    "controllerUrl": "aps/content/api/appSet/classSet/info/controller.js",
+    "config": 
+    {
+           "findByIdURL":"json/Open_queryForObject_findClassInfoByPk.json"
+	}
+}

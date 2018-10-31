@@ -1,0 +1,12 @@
+{
+    "name": "schoolSet",
+    "viewUrl": "aps/content/api/appSet/schoolSet/list/template.html",
+    "controllerUrl": "aps/content/api/appSet/schoolSet/list/controller.js",
+    "config": 
+    {
+             "findURL":"json/Open_queryForList_findSchoolInfoList.json",
+             "deleteURL":"json/Open_delete_deleteSchoolLogInfo.json"
+             
+             
+	}
+}

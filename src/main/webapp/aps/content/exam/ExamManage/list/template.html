@@ -1,0 +1,77 @@
+<form class="form-inline text-left" style="margin: 15px;">
+	<div class="form-group">
+    	<label class="" > &nbsp;评测名称：</label>
+   		<input type="text" class="form-control" ng-model="form.EXAMNAME">
+  	</div>
+	  
+	<div class="form-group">
+		<label class=""> &nbsp; 评测类型：</label> 
+		<select class="form-control" 
+			ng-model="form.EXAMTYPEID" ng-options="examType.EXAMTYPEID as examType.EXAMTYPE for examType in ExamTypeList">
+			<option value="">--请选择--</option>
+		</select>
+	</div>
+	
+	<div class="form-group">
+		<label class=""> &nbsp; 科目：</label> 
+		<select class="form-control" ng-model="form.FK_COURSE" ng-options="Courseinfo.COURSEID as Courseinfo.COURSENAME for Courseinfo in CourseList">
+			<option  value="">--请选择--</option>
+		</select>
+	</div>
+	
+	<div class="form-group">
+		<label class=""> &nbsp; 年级：</label> 
+		<select class="form-control"  ng-model="form.GRADE_CODE" 
+				ng-options="grade.GRADE_CODE as grade.GRADE_NAME for grade in GradeList">
+			<option value="">--请选择--</option>
+		</select>
+	</div>
+		
+				
+	<button ng-click="select()" type="button" class="btn btn-default"> 
+	<span class="glyphicon glyphicon-search" aria-hidden="true"></span> 查询 
+	</button>
+ </form>
+<div class="panel panel-info" style="margin: 20px 20px">
+ <!-- Table -->
+ <table class="table table-hover table-striped table-bordered ">  
+      <thead>
+        <tr>
+          <th style="width: 50px;">选择</th>
+          <th column="EXAMNAME" class="sorting" ng-click="order($event.target)">评测名称</th>
+          <th column="EXAMTYPE" class="sorting" ng-click="order($event.target)">评测类型</th>
+          <th column="GRADENAME" class="sorting" ng-click="order($event.target)">年级</th>
+          <th column="COURSENAME" class="sorting" ng-click="order($event.target)">科目</th>
+          <th column="CREATETIME" class="sorting" ng-click="order($event.target)">创建时间</th>
+          <th column="" class="sorting" ng-click="order($event.target)">操作</th>
+          <th column="" class="sorting" ng-click="order($event.target)">操作</th>
+          <th column="" class="sorting" ng-click="order($event.target)">操作</th>
+       </tr>
+      </thead>
+      <tbody ng-switch on="page.current_num">
+      	<tr ng-switch-when="0">
+      		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+      	</tr>
+        <tr ng-repeat='data in dataList'>
+			<td>
+			<input type="checkbox" name="dataPk" value="{{data.EXAMID}}">
+			</td>
+			<td>{{data.EXAMNAME}}</td>
+			<td>{{data.EXAMTYPE}}</td>
+			<td>{{data.GRADENAME}}</td>
+			<td>{{data.COURSENAME}}</td>
+			<td>{{data.CREATETIME}}</td>
+			<td><a ng-click="ScoreSumManage(data.EXAMID)">分项管理</a></td>
+			<td><a ng-click="ScoreImport(data.EXAMID)">成绩导入</a></td>
+			<td><a ng-click="ScoreSumAnalysis(data.EXAMID)">分项分析</a></td>
+		</tr>
+      </tbody>
+      <tfoot>
+      	<tr>
+      		<td colspan="100">
+      		<div ng-include="'html/page.html'"></div>
+			</td>
+      	</tr>
+      </tfoot>
+    </table>
+</div>

@@ -1,0 +1,12 @@
+{
+    "name": "exportSumScoreExcel",
+    "viewUrl": "aps/content/exam/ScoreSumAnalysis/exportSumScoreExcel/template.html",
+    "controllerUrl": "aps/content/exam/ScoreSumAnalysis/exportSumScoreExcel/controller.js",
+    "config": 
+    {
+            "menu":{	
+	            "buttons":[]
+			}
+            
+	}
+}

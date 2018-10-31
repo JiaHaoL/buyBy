@@ -1,0 +1,19 @@
+<table style="width:95%;">
+	<tr>
+		<td valign="top">
+			作者：{{form.STUDENT_NAME }}  &nbsp; &nbsp; &nbsp; 
+			发表时间：{{form.CREATETIME | date:'yyyy-MM-dd'  }}
+		</td>
+	</tr>
+	
+	<tr>
+		<td valign="top">
+			<div ng-bind-html="form.CONTENT | trustHtml"></div>
+		</td>
+	</tr>
+	
+</table>
+
+<br/>
+
+

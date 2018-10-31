@@ -1,0 +1,119 @@
+<form class="form-inline" rule="form" style="padding-top: 15px;padding-bottom: 20px;">
+	<div style="margin-left: 20px" class="form-group">
+		<label class="" style="color: #444444"> &nbsp; 分组ID：</label> 
+		<input type="text" class="form-control" ng-model="form.groupid" placeholder="分组ID"> 
+		
+		<label class="" style="color: #444444"> &nbsp; IP组名：</label> 
+		<input type="text" class="form-control" ng-model="form.groupname" placeholder="IP组名"> 
+
+		<button type="button" style="margin-left: 10px"
+			ng_click="product_typeClick()" class="btn btn-default">
+			<span class="glyphicon glyphicon-search"></span> 查询
+		</button>
+	</div>
+</form>
+
+<div style="overflow: auto; width: 1150px;">
+	<table class="table"  >
+		<tr>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">分组ID</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">IP组名</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">总流量速率<br/>峰值</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">总流量速率<br/>峰值时间</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">进流量速率<br/>峰值</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">进流量速率<br/>峰值时间</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">出流量速率<br/>峰值</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">出流量速率<br/>峰值时间</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">SYN总攻击<br/>频率峰值</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">SYN总攻击<br/>频率峰值时间</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">SYN进攻击<br/>频率峰值</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">SYN进攻击<br/>频率峰值时间</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">SYN出攻击<br/>频率峰值</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">SYN出攻击<br/>频率峰值时间</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">TCP总扫描<br/>频率峰值</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">TCP总扫描<br/>频率峰值时间</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">TCP进扫描<br/>频率峰值</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">TCP进扫描<br/>频率峰值时间</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">TCP出扫描<br/>频率峰值</th>
+			<th nowrap="nowrap" column="PREPARE_LESSON_NAME" 
+				style=" color: #268e88; "
+				ng-click="order($event.target)">TCP出扫描<br/>频率峰值时间</th>
+		</tr>
+	</thead>
+	<tbody ng-switch on="page.current_num"
+		style="background-color: #f2f2f2">
+		<tr ng-switch-when="0">
+			<td colspan="100" class="NoSelectHistory">查询无记录</td>
+		</tr>
+		<tr ng-repeat='data in dataList'>
+			<td style="font-size: 10px; color: #444444;">{{data.groupid}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.groupname}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.totalratepeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.totalratepeak_time}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.inratepeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.inratepeak_time}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.outratepeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.outratepeak_time}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.syntotalpeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.syntotalpeak_time}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.syninpeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.syninpeak_time}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.synoutpeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.synoutpeak_time}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.tcpscantotalpeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.tcpscantotalpeak_time}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.tcpscaninpeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.tcpscaninpeak_time}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.tcpscanoutpeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.tcpscanoutpeak_time}}</td>
+		</tr>
+	</tbody>
+	<tfoot style="background-color: #edf0f4">
+		<tr>
+			<td colspan="100">
+				<div ng-include="'html/page.html'"></div>
+			</td>
+		</tr>
+	</tfoot>
+</table>
+</div>
+
+

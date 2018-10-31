@@ -1,0 +1,30 @@
+{
+    "name": "app_page_parent_bindingCheck_check",
+    "viewUrl": "aps/content/page/parent/bindingCheck/check/template.html",
+    "controllerUrl": "aps/content/page/parent/bindingCheck/check/controller.js",
+    "config": 
+    {
+            "timeout": 60000,
+            "loadURL":"json/Open_queryForObject_getBindingCheckObj.json",
+            "checkURL":"json/Parent_bindingCheck_data.json",
+            "menu":{
+	            "buttons":[
+		        	{
+		            	"buttonName":"不通过",
+		            	"buttonStyle":"danger",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"app_page_parent_bindingCheck_check.checkno"
+		        	},
+		        	{
+		            	"buttonName":"通过",
+		            	"buttonStyle":"success",
+		            	"buttonImg":"ok",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"app_page_parent_bindingCheck_check.checkpass"
+		        	}
+		        	
+				]
+			}
+	}
+}

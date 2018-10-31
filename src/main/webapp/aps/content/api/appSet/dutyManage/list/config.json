@@ -1,0 +1,15 @@
+{
+    "name": "dutyManage",
+    "viewUrl": "aps/content/api/appSet/dutyManage/list/template.html",
+    "controllerUrl": "aps/content/api/appSet/dutyManage/list/controller.js",
+    "config": 
+    {
+            "findGradeByTeacherURL":"json/Open_queryForList_findGradeByTeacherJH.json",
+            "findClassByTeacherURL":"json/Open_queryForList_findClassByTeacher.json",
+            "findClassDutySetURL":"json/Open_queryForList_findClassDutySet.json",
+           	"findWeekDayListURL":"json/Open_queryForList_findWeekDayList.json",
+            "findURL":"json/Open_queryForList_findClassStuDutyList.json",
+            "deleteURL":"json/Open_update_deleteClassDutyStu.json"
+            
+	}
+}

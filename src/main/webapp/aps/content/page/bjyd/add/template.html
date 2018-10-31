@@ -1,0 +1,31 @@
+<table >
+	<tr>
+		<td class="eWebEditor1" valign="top">
+		<form class="form-inline" style="margin-bottom: 10px;">
+		  
+		  <div class="form-group has-feedback ">
+		    <label> &nbsp; 学生：</label>
+           	<select class="form-control" not-null="yes" ng-model="form.PK_STUDENTINFO" 
+		      	ng-options="student.STUDENT_PK as student.STUDENT_XM for student in studentsData ">
+				  <option value="">--请选择--</option>
+			  </select>
+		  </div>
+		  
+		  <div class="form-group has-feedback " style="margin-left: 30px;">
+		    <label>标题：</label>
+		    <input type="text" style="width: 640px;" not-null="yes" ng-model="form.TITLE" class="form-control" />
+		  </div>
+		  
+		</form>
+
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+		<INPUT type="hidden" name="content1" value="">
+		<IFRAME ID="eWebEditor1" width="850" height="650" src="http://portal.sjedu.cn/ewebeditor/ewebeditor.htm?id=content1&style=coolblue" frameborder="0" scrolling="no" ></IFRAME>
+		</td>
+	</tr>
+</table>
+  
+

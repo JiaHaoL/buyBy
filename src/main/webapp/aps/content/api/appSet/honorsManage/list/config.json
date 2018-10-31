@@ -1,0 +1,13 @@
+{
+    "name": "honorsManage",
+    "viewUrl": "aps/content/api/appSet/honorsManage/list/template.html",
+    "controllerUrl": "aps/content/api/appSet/honorsManage/list/controller.js",
+    "config": 
+    {
+             "findURL":"json/Open_queryForList_findClassHonorsList.json",
+             "findGradeListURL":"json/Open_queryForList_findGradeListByPk.json",
+ 		     "findClassListURL":"json/Open_queryForList_findClassListByPk.json",
+             "findHonorsTypeListURL":"json/Open_queryForList_findHonorsTypeList.json",
+             "deleteURL":"json/Open_delete_deleteClassHonors.json"
+	}
+}

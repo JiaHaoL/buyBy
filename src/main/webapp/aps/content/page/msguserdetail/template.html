@@ -1,0 +1,43 @@
+
+   <div class="div_message_view" style="padding-top:15px;">
+     <div class="panel panel-info">
+      <!-- Table -->
+				<table class="table table-hover table-striped table-bordered" style="text-align: center;">  
+				      <thead>
+				        <tr>
+				          <th column="STATUS" style="text-align: center;">查看时间</th>
+				          <th column="SC_COURSE_PK" style="text-align: center;">用户</th>
+				          <th column="FK_TEACHER" style="text-align: center;">用户类型</th>
+				          <th column="FK_UNIT" style="text-align: center;">来源</th>
+				          <th column="FK_UNIT" style="text-align: center;">终端</th>
+				          <th column="FK_UNIT" style="text-align: center;">访问IP</th>
+				        </tr>
+				      </thead>
+				      <tbody>
+				        <tr ng-repeat='data in listdata'>
+				          <td style="line-height: 32px;" >{{data.READ_TIME}}</a></span></td>
+				          <td style="line-height: 32px;" >{{data.READ_USERXM}}</td>
+				          <td style="line-height: 32px;" ng-switch on="data.READ_USERTYPE">
+				               <span ng-switch-when="1">教师</span>
+				          	<span ng-switch-when="2">学生</span>
+				          	<span ng-switch-when="3">家长</span>
+				          </td>
+				          <td style="line-height: 32px;" ng-switch on="data.READ_SYSTEM">
+				            <span ng-switch-when="JZPD">家长频道</span>
+				          	<span ng-switch-when="JXHD">家校互动</span>
+				            <span ng-switch-when="XSTD">学生天地</span> 
+				            <span ng-switch-when="BJKJ">班级空间</span> 
+				          </td>
+				          <td style="line-height: 32px;"  ng-switch on="data.READ_CLIENT">
+				          	<span ng-switch-when="1">电脑</span>
+				          	<span ng-switch-when="2">手机</span>
+				          	<span ng-switch-when="3">微信</span>
+				          </td>
+				          <td style="line-height: 32px;" >{{data.READ_IP}}</a></span></td>
+				        </tr>
+				      </tbody>
+				    </table>
+      </div>
+   </div>
+   
+</div>

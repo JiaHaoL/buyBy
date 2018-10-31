@@ -1,0 +1,15 @@
+{
+    "name": "ScoreSumAnalysis",
+    "viewUrl": "aps/content/exam/ScoreSumAnalysis/list/template.html",
+    "controllerUrl": "aps/content/exam/ScoreSumAnalysis/list/controller.js",
+    "config": 
+    {		
+    		"findExamListURL": "json/Open_queryForList_findExaminfoByPKSchool.json",
+    		"findStuCourseListURL":"json/Open_queryForList_findSubmitExamStuCourseList.json",
+ 			"findExamClassListURL":"json/Open_queryForList_findExamClassList.json",
+           	"findSubmitExaminfoURL": "json/Open_queryForList_findPrimaryExamstuSumScore.json",
+            "findScoreSumListURL": "json/Open_queryForList_findScoreSumList.json",
+            "findPrimaryExamstuSumScoreURL":"json/SchoolReport_query_findPrimaryExamstuDetailScore.json"
+          
+	}
+}

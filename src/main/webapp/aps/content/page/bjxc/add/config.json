@@ -1,0 +1,27 @@
+{
+    "name": "cms_document_add",
+    "viewUrl": "aps/content/page/bjxc/add/template.html",
+    "controllerUrl": "aps/content/page/bjxc/add/controller.js",
+    "config": 
+    {
+            "addURL": "json/Message_sendBjxc_data.json",
+            "findResTypeURL": "json/Open_queryForList_findResTypeList.json",
+            "deleteURL": "json/Open_insert_bjxcDelete.json",
+            "menu":{
+	            "buttons":[
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_add.save"
+		        	},
+		        	{
+		            	"buttonName":"取消",
+		            	"buttonStyle":"default",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_add.close"
+		        	}
+				]
+			}
+	}
+}

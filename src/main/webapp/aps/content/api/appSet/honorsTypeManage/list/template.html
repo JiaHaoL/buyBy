@@ -1,0 +1,45 @@
+<form class="form-inline" style="margin: 15px;">
+	<div class="form-group">
+		<label class=""> &nbsp; 荣誉类型名称：</label> 
+		<input  class="form-control" type="text" ng-model="form.TYPE_NAME">
+	</div>	
+		
+	<button type="button" class="btn btn-default" ng-click="select()">
+  		<span class="glyphicon glyphicon-search" aria-hidden="true"></span> 查询 
+  	</button>
+  </form>
+   
+   <div class="panel panel-info" style="margin: 20px;">
+ <!-- Table -->
+	<table class="table table-hover table-striped table-bordered">  
+	    <thead>
+	    	<tr>
+		        <th style="width: 50px;">选择</th>
+		        <th column="TYPE_NAME" class="sorting" ng-click="order($event.target)">荣誉类型名称</th>
+		        <th column="CREATE_NAME" class="sorting" ng-click="order($event.target)">创建人</th>
+		        <th column="CREATE_TIME" class="sorting" ng-click="order($event.target)">创建时间</th>
+	       </tr>
+	    </thead>
+        <tbody ng-switch on="page.current_num">
+	      	<tr ng-switch-when="0">
+	      		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+	      	</tr>
+	        <tr ng-repeat='data in dataList'>
+				<td>
+				<input type="checkbox" name="dataPk" value="{{data.HONORS_TYPE_PK}}">
+				</td>
+				<td>{{data.TYPE_NAME}}</td>
+				<td>{{data.CREATE_NAME}}</td>
+				<td>{{data.CREATE_TIME}}</td>
+			</tr>
+       </tbody>
+      <tfoot>
+      	<tr>
+      		<td colspan="100">
+      		<div ng-include="'html/page.html'"></div>
+			</td>
+      	</tr>
+      </tfoot>
+    </table>
+</div>
+  

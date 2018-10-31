@@ -1,0 +1,52 @@
+<form class="form-inline text-left" style="margin: 15px;">
+	<div class="form-group">
+    	<label class="" > &nbsp;设备编号：</label>
+   		<input type="text" class="form-control" ng-model="form.UNIT_DEVICE_PK">
+  	</div>
+	  	
+				
+	<button ng-click="select()" type="button" class="btn btn-default"> 
+	<span class="glyphicon glyphicon-search" aria-hidden="true"></span> 查询 
+	</button>
+ </form>
+<div class="panel panel-info" style="margin: 20px 20px">
+ <!-- Table -->
+ <table class="table table-hover table-striped table-bordered ">  
+      <thead>
+        <tr>
+          <th style="width: 50px;">选择</th>
+          <th column="FK_UNIT" class="sorting" ng-click="order($event.target)">学校名称</th>
+          <th column="FK_GRADE" class="sorting" ng-click="order($event.target)">年级</th>
+          <th column="FK_CLASS" class="sorting" ng-click="order($event.target)">班级</th>
+          <th column="CLASS_CODE" class="sorting" ng-click="order($event.target)">教室号</th>
+          <th column="DEVICE_VERSION" class="sorting" ng-click="order($event.target)">设备型号</th>
+          <th column="DEVICE_IME" class="sorting" ng-click="order($event.target)">设备IME</th>
+          <th column="DEVICE_MAC" class="sorting" ng-click="order($event.target)">设备MAC</th>
+       </tr>
+      </thead>
+      <tbody ng-switch on="page.current_num">
+      	<tr ng-switch-when="0">
+      		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+      	</tr>
+        <tr ng-repeat='data in dataList'>
+			<td>
+			<input type="checkbox" name="dataPk" value="{{data.UNIT_DEVICE_PK}}">
+			</td>
+			<td>{{data.UNIT_NAME}}</td>
+			<td>{{data.GRADE_NAME}}</td>
+			<td>{{data.CLASS_NAME}}</td>
+			<td>{{data.CLASS_CODE}}</td>
+			<td>{{data.DEVICE_VERSION}}</td>
+			<td>{{data.DEVICE_IME}}</td>
+			<td>{{data.DEVICE_MAC}}</td>
+		</tr>
+      </tbody>
+      <tfoot>
+      	<tr>
+      		<td colspan="100">
+      		<div ng-include="'html/page.html'"></div>
+			</td>
+      	</tr>
+      </tfoot>
+    </table>
+</div>

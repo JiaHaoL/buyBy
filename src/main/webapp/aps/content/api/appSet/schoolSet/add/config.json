@@ -1,0 +1,28 @@
+{
+    "name": "schoolSet_add",
+    "viewUrl": "aps/content/api/appSet/schoolSet/add/template.html",
+    "controllerUrl": "aps/content/api/appSet/schoolSet/add/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_findAllUnitList.json",
+            "findRuleURL": "json/Open_queryForList_BaseFindRule.json",
+             "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"schoolSet_add.close"
+		        	},
+		        	{
+		            	"buttonName":"下一步",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"schoolSet_add.save"
+		        	}
+				]
+			}
+	}
+}

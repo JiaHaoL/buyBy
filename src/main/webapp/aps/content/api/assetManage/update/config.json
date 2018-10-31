@@ -1,0 +1,29 @@
+{
+    "name": "assetManage_update",
+    "viewUrl": "aps/content/api/assetManage/update/template.html",
+    "controllerUrl": "aps/content/api/assetManage/update/controller.js",
+    "config": 
+    {			
+    		 "findAssetURL":"json/Open_queryForList_findAssetByList.json",
+            "findAssetManageURL":"json/Open_queryForObject_findAssetManageObject.json",
+            "updateAssetManageURL":"json/Open_update_updateAssetManageResult.json",
+            "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"assetManage_update.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"assetManage_update.save"
+		        	}
+				]
+			}
+	}
+}

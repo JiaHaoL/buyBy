@@ -1,0 +1,32 @@
+{
+    "name": "honorsManage_add",
+    "viewUrl": "aps/content/api/appSet/honorsManage/add/template.html",
+    "controllerUrl": "aps/content/api/appSet/honorsManage/add/controller.js",
+    "config": 
+    {
+           "findURL":"json/Open_queryForList_findUnitSchoolList.json",
+           "findStatusURL":"json/Open_queryForObject_findHonorsTypeByPk.json",
+           "findGradeListURL":"json/Open_queryForList_findGradeListByPk.json",
+ 		   "findClassListURL":"json/Open_queryForList_findClassListByPk.json",
+           "findHonorsTypeListURL":"json/Open_queryForList_findHonorsTypeList.json",
+           "addURL": "json/Open_insert_insertClassHonors.json",
+             "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"honorsManage_add.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"honorsManage_add.save"
+		        	}
+				]
+			}
+	}
+}

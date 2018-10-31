@@ -1,0 +1,82 @@
+<form class="form-inline" style="margin: 15px;">
+	<div class="form-group">
+		<label class=""> &nbsp; 年级列表：</label> 	
+		<select class="form-control"  ng-model="form.FK_GRADE" ng-options="grade.GRADE_PK as grade.GRADE_NAME for grade in gradeList"  ng-change="findClassList()">
+			<option value="">--请选择--</option>
+		</select>
+	</div>	
+	
+	<div class="form-group">
+		<label class=""> &nbsp; 班级列表：</label> 	
+		<select class="form-control"  ng-model="form.FK_CLASS"  ng-options="class.CLASS_PK as class.CLASS_BJ for class in classList">
+			<option value="">--请选择--</option>
+		</select>
+	</div>
+	
+	<div class="form-group">
+		<label class=""> &nbsp; 年份：</label> 	
+		<select class="form-control"  ng-model="form.HONOR_YEAR" ng-options="year for year in yearList">
+			<option value="">--请选择--</option>
+		</select>
+	</div>	
+	
+	<div class="form-group">
+		<label class=""> &nbsp; 月份：</label> 	
+		<select class="form-control"  ng-model="form.HONOR_MONTH" ng-options="month for month in monthList">
+			<option value="">--请选择--</option>
+		</select>
+	</div>	
+	
+	<div class="form-group">
+		<label class=""> &nbsp; 荣誉类型：</label> 	
+		<select class="form-control"  ng-model="form.HONOR_TYPE" ng-options="type.HONORS_TYPE_PK as type.TYPE_NAME for type in honorsTypeList">
+			<option value="">--请选择--</option>
+		</select>
+	</div>	
+	
+	
+	
+  	<button type="button" class="btn btn-default" ng-click="select()">
+  		<span class="glyphicon glyphicon-search" aria-hidden="true"></span> 查询 
+  	</button>	
+</form>
+		 
+<div class="panel panel-info" style="margin: 20px;">
+ <!-- Table -->
+	<table class="table table-hover table-striped table-bordered ">  
+	    <thead>
+	    	<tr>
+		        <th style="width: 50px;">选择</th>
+		        <th column="CLASS_NAME" class="sorting" ng-click="order($event.target)">班级名称</th>
+		        <th column="HONORS_NAME" class="sorting" ng-click="order($event.target)">班级荣誉</th>
+		        <th column="HONOR_YEAR" class="sorting" ng-click="order($event.target)">年份</th>
+		        <th column="HONOR_MONTH" class="sorting" ng-click="order($event.target)">月份</th>
+		        <th column="HONOR_NUMBER" class="sorting" ng-click="order($event.target)">荣誉排名</th>
+		        <th column="REMARK" class="sorting" ng-click="order($event.target)">备注</th>
+	       </tr>
+	    </thead>
+        <tbody ng-switch on="page.current_num">
+	      	<tr ng-switch-when="0">
+	      		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+	      	</tr>
+	        <tr ng-repeat='data in dataList'>
+				<td>
+				<input type="checkbox" name="dataPk" value="{{data.CLASS_HONORS_PK}}">
+				</td>
+				<td>{{data.CLASS_BJ}}</td>
+				<td>{{data.HONORS_NAME}}</td>
+				<td>{{data.HONOR_YEAR}}</td>
+				<td>{{data.HONOR_MONTH}}</td>
+				<td>{{data.HONOR_NUMBER}}</td>
+				<td>{{data.REMARK}}</td>
+			</tr>
+       </tbody>
+      <tfoot>
+      	<tr>
+      		<td colspan="100">
+      		<div ng-include="'html/page.html'"></div>
+			</td>
+      	</tr>
+      </tfoot>
+    </table>
+</div>

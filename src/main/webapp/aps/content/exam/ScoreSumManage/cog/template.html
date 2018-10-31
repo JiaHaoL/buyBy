@@ -1,0 +1,59 @@
+
+
+<div style="padding:15px;">
+	
+<!-- 	<div class="panel-heading">
+		<h3 class="panel-title">{{form.MENU_NAME}} 【{{form.MENU_CODE}}】</h3>
+		<input type="hidden"  name="CONTROLLER_NAME" value="{{form.CONTROLLER_NAME}}">
+	</div> -->
+	
+	<div class="panel panel-default">
+	  <div class="panel-body">
+	     <button type="button" class="btn btn-info" ng-click="add()"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 添加 </button>
+	     &nbsp; 
+	     <button type="button" class="btn btn-warning" ng-click="update()"> <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改 </button>
+	     &nbsp; 
+	     <button type="button" class="btn btn-danger" ng-click="removeRule()"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 移除 </button>
+	  </div>
+
+      <!-- Table -->
+      <table class="table table-hover table-striped  table-bordered">
+      <thead>
+        <tr>
+          <th style="width: 20px;"><input type="checkbox" class="isCheckll" ng-click="checkAll($event.target)" /></th>
+          <th column="LEVELNAME" class="sorting" ng-click="order($event.target)">等级名称</th>
+          <th column="LEVELSCORE" class="sorting" ng-click="order($event.target)">等级分数</th>
+          <th column="LEVELRETE" class="sorting" ng-click="order($event.target)">百分比</th>
+	  	  <th column="EXCEEDRETE " class="sorting" ng-click="order($event.target)">是否含等级分数</th>
+	  	  <th column="CREATETIME" class="sorting" ng-click="order($event.target)">创建时间</th>
+        </tr>
+      </thead>
+      <tbody ng-switch on="page.current_num">
+      	<tr ng-switch-when="0">
+      		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+      	</tr>
+        <tr ng-repeat='row in dataList'>
+          <td><input type="checkbox" name="dataPk" value="{{row.LEVELID}}" /></td>
+          <td>{{row.LEVELNAME}}</td>
+          <td>{{row.LEVELSCORE}}</td>
+	  	  <td>{{row.LEVELRETE}}</td>
+          <td ng-switch on="row.EXCEEDRETE">
+          	<span ng-switch-when="Y">是</span>
+          	<span ng-switch-when="N">否</span>	
+          </td>
+          <td>{{row.CREATETIME}}</td>
+        </tr>
+       
+      </tbody>
+      <tfoot>
+      	<tr>
+      		<td colspan="100">
+      		
+      		<div ng-include="'html/page.html'"></div>
+      		
+			</td>
+      	</tr>
+      </tfoot>
+    </table>
+    </div>
+</div>

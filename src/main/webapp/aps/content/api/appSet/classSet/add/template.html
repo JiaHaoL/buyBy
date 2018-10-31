@@ -1,0 +1,76 @@
+<!-- <div style="padding: 15px;">
+
+<form class="form-inline" style="margin-bottom:10px;float: left;">
+  <div class="form-group">
+  	<select class="form-control" ng-model="form.FK_DICTIONARY_ASCERTAINED" 
+     	ng-options="dic.DICTIONARY_PK as dic.DICTIONARY_NAME for dic in unitBbs ">
+	  <option value="">--全部--</option>
+  	</select>
+  </div>
+  
+  <div class="form-group">
+	  <select class="form-control" ng-model="form.FK_DICTIONARY_SCHOOL_TYPE" 
+	     	ng-options="dic.DICTIONARY_PK as dic.DICTIONARY_NAME for dic in unitLbs ">
+		  <option value="">--全部--</option>
+	  </select>
+  </div>
+  
+  <div class="form-group">
+    <input type="text" class="form-control"  ng-model="form.UNIT_NAME" placeholder="学校名称">
+  </div>
+ 
+  <button type="submit" class="btn btn-default" ng-click="select()"> <span class="glyphicon glyphicon-search"></span> 查询 </button>
+  
+  
+</form>
+  
+Table
+<table class="table table-hover table-striped table-bordered panel-info">
+<thead>
+  <tr>
+    <th>
+       <input type="checkbox" class="isCheckll" ng-click="checkAll($event.target)" /></th>
+       <th  column="UNIT_PK" class="sorting" ng-click="order($event.target)">编号</th>
+       <th style="width: 120px;" column="UNIT_CODE" class="sorting" ng-click="order($event.target)">学校编号(市)</th>
+       <th column="UNIT_ABBREVIATION" class="sorting" ng-click="order($event.target)">学校名称</th>
+       <th column="PROPERTY_CODE_NAME" class="sorting" ng-click="order($event.target)">学校办别</th>
+       <th column="UNIT_TYPE_NAME" class="sorting" ng-click="order($event.target)">学校类别</th>
+       <th column="UNIT_ADDRESS" class="sorting" ng-click="order($event.target)">详细地址</th>
+     </tr>
+   </thead>
+   <tbody ng-switch on="page.current_num">
+   	<tr ng-switch-when="0">
+   		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+   	</tr>
+     <tr ng-repeat='row in dataList'>
+       <td><input type="checkbox" name="dataPk" value="{{row.UNIT_PK}}" /></td>
+       <td>{{row.UNIT_PK }}</td>
+       <td>{{row.UNIT_CODE }}</td>
+       <td>{{row.UNIT_NAME}}</td>
+       <td>{{row.NAME_DICTIONARY_AREA_CODE}}</td>
+       <td>{{row.NAME_DICTIONARY_AREA_TYPE}}</td>
+       <td>{{row.UNIT_ADDRESS }}</td>
+     </tr>
+    
+   </tbody>
+   <tfoot>
+   	<tr>
+   		<td colspan="100">
+   		<div ng-include="'html/page.html'"></div>
+	</td>
+   	</tr>
+   </tfoot>
+</table>
+</div>  
+ -->
+ 
+ 
+ <form class="form-horizontal form-horizontal-condensed" >
+		<div class="form-group">
+			<label class="col-sm-3 control-label"> &nbsp; 座右铭：</label> 
+			<div class="col-sm-8">
+			<textarea  not-null="yes" class="form-control" ng-model="form.REMARK" ></textarea>
+			</div>
+		</div>
+</form>
+ 

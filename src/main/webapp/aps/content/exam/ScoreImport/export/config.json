@@ -1,0 +1,14 @@
+{
+    "name": "ScoreImport_export",
+    "viewUrl": "aps/content/exam/ScoreImport/export/template.html",
+    "controllerUrl": "aps/content/exam/ScoreImport/export/controller.js",
+    "config": 
+    {
+            "findURL":"",
+          
+            "menu":{	
+	            "buttons":[]
+			}
+            
+	}
+}

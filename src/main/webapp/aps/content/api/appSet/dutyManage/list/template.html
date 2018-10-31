@@ -1,0 +1,72 @@
+<form class="form-inline" style="margin: 15px;">
+	<div class="form-group">&nbsp; &nbsp;年级：
+		 <select class="form-control" ng-model="form.FK_GRADE" ng-click="findClass()" ng-options="grade.GRADE_PK as grade.GRADE_NAME for grade in gradeList">
+			<option value="">--请选择--</option>
+		</select>
+	</div>
+	
+	<div class="form-group">&nbsp; &nbsp;班级：
+		 <select class="form-control" ng-model="form.FK_CLASS" ng-options="class.CLASS_PK as class.CLASS_BJ for class in classList">
+			<option value="">--请选择--</option>
+		</select>
+	</div>
+	
+	<!-- <div class="form-group">&nbsp; &nbsp;值日任务：
+		 <select class="form-control" ng-model="form.FK_DUTY" ng-options="duty.DUTY_PK as duty.DUTY_NAME for duty in dutyList">
+			<option value="">--请选择--</option>
+		</select>
+	</div> -->
+  	
+  	<div class="form-group">&nbsp; &nbsp;时间：
+		 <select class="form-control" ng-model="form.WEEK_DAY" ng-options="week.KEY as week.VALUE for week in weekList">
+			<option value="">--请选择--</option>
+		</select>
+	</div>
+	
+  	<button type="submit" class="btn btn-default" ng-click="select()">
+		<span class="glyphicon glyphicon-search"></span> 查询
+	</button>	
+</form>
+		 
+<div class="panel panel-info" style="margin: 20px;">
+ <!-- Table -->
+	<table class="table table-hover table-striped table-bordered ">  
+	    <thead>
+	    	<tr>
+		        <th style="width: 50px;">选择</th>
+		        <th column="DUTY_NAME" class="sorting" ng-click="order($event.target)">值日名称</th>
+		        <th column="STU_NAME" class="sorting" ng-click="order($event.target)">学生姓名</th>
+		        <th column="WEEK" class="sorting" ng-click="order($event.target)">时间</th>
+	       </tr>
+	    </thead>
+        <tbody ng-switch on="page.current_num">
+	      	<tr ng-switch-when="0">
+	      		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+	      	</tr>
+	        <tr ng-repeat='data in dataList'>
+				<td>
+				<input type="checkbox" name="dataPk" value="{{data.DUTY_TASK_PK}}">
+				</td>
+				<td>{{data.DUTY_NAME}}</td>
+				<td>{{data.STU_NAME}}</td>
+				<td ng-switch on="data.WEEK_DAY">
+					<span ng-switch-when="1">周一</span>
+					<span ng-switch-when="2">周二</span>
+					<span ng-switch-when="3">周三</span>
+					<span ng-switch-when="4">周四</span>
+					<span ng-switch-when="5">周五</span>
+				</td>
+				<!-- <td>
+					<a ng-click="info(data.CLASS_HONORS_PK)"><span class="glyphicon glyphicon-search"></span>查看详情</a> 
+				</td> -->
+			</tr>
+       </tbody>
+      <tfoot>
+      	<tr>
+      		<td colspan="100">
+      		<div ng-include="'html/page.html'"></div>
+			</td>
+      	</tr>
+      </tfoot>
+    </table>
+</div>

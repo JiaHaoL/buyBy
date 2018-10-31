@@ -1,0 +1,28 @@
+{
+    "name": "honorsTypeManage_update",
+    "viewUrl": "aps/content/api/appSet/honorsTypeManage/update/template.html",
+    "controllerUrl": "aps/content/api/appSet/honorsTypeManage/update/controller.js",
+    "config": 
+    {		"uploadurl":"http://rescenter.sjedu.cn/ResCenter/upload/Upload_fileUploadDomain_fileUploadDomain.json",
+    		"findByIdURL":"json/Open_queryForObject_findHonorsTypeByPk.json",
+ 			"updateURL":"json/Open_update_updateHonorsType.json",
+            "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"honorsTypeManage_update.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"honorsTypeManage_update.save"
+		        	}
+				]
+			}
+	}
+}

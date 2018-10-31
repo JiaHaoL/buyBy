@@ -1,0 +1,13 @@
+{
+    "name": "app_page_meguserdetail_list",
+    "viewUrl": "aps/content/page/msguserdetail/template.html",
+    "controllerUrl": "aps/content/page/msguserdetail/controller.js",
+    "config": 
+    {
+            "timeout": 60000,
+            "findMsgUserListURL":"json/Open_queryForList_findMsgUserList.json",
+            "menu":{
+            	
+			}
+	}
+}

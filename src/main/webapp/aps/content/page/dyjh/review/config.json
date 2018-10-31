@@ -1,0 +1,10 @@
+{
+    "name": "app_page_dyjh_review",
+    "viewUrl": "aps/content/page/dyjh/review/template.html",
+    "controllerUrl": "aps/content/page/dyjh/review/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_dyjhReviewList.json",
+            "infoURL": "aps/content/page/dyjh/info/config.json"
+	}
+}

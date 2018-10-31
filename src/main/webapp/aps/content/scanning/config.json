@@ -1,0 +1,9 @@
+{
+    "name": "scanning",
+    "viewUrl": "aps/content/scanning/template.html",
+    "controllerUrl": "aps/content/scanning/controller.js",
+    "config": 
+    {
+    		"TrafficScanning": "json/Open_queryForList_getTrafficScanningInfo.json"
+	}
+}

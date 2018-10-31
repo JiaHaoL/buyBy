@@ -1,0 +1,12 @@
+{
+    "name": "app_page_dyjh_list",
+    "viewUrl": "aps/content/page/dyjh/list/template.html",
+    "controllerUrl": "aps/content/page/dyjh/list/controller.js",
+    "config": 
+    {
+            "defaultURL": "aps/content/page/dyjh/my/config.json",
+            "classURL": "aps/content/page/dyjh/class/config.json",
+            "schoolURL": "aps/content/page/dyjh/school/config.json",
+            "listURL": "aps/content/page/dyjh/all/config.json"
+	}
+}

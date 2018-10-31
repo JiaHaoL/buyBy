@@ -1,0 +1,9 @@
+{
+    "name": "app_page_columnReport_column",
+    "viewUrl": "aps/content/page/columnReport/columnX/template.html",
+    "controllerUrl": "aps/content/page/columnReport/columnX/controller.js",
+    "config": 
+    {
+         "getuserInfoURL":"json/Parent_userInfo_data.json"
+	}
+}

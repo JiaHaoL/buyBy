@@ -1,0 +1,34 @@
+{
+    "name": "masterManage_update",
+    "viewUrl": "aps/content/api/masterManage/update/template.html",
+    "controllerUrl": "aps/content/api/masterManage/update/controller.js",
+    "config": 
+    {			
+    		  "findAssetByURL":"json/Open_queryForList_findAssetAllList.json",
+    		  "findDeviceURL":"json/Open_queryForList_findDeviceByList.json",
+    		  "findTempURL":"json/Open_queryForList_findTempByList.json",
+    		  "findSnmpURL":"json/Open_queryForList_findSnmpByList.json",
+    		  "findCertURL":"json/Open_queryForList_findCertByList.json",
+    		  "findEncryURL":"json/Open_queryForList_findEncryByList.json",
+            "findMasterManageURL":"json/Open_queryForObject_findMasterManageObject.json",
+            "updateMasterManageURL":"json/Open_update_updateMasterManageResult.json",
+            "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"masterManage_update.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"masterManage_update.save"
+		        	}
+				]
+			}
+	}
+}

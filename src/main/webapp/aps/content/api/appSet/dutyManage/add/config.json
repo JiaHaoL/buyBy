@@ -1,0 +1,32 @@
+{
+    "name": "dutyManage_add",
+    "viewUrl": "aps/content/api/appSet/dutyManage/add/template.html",
+    "controllerUrl": "aps/content/api/appSet/dutyManage/add/controller.js",
+    "config": 
+    {
+            "findGradeByTeacherURL":"json/Open_queryForList_findGradeByTeacherJH.json",
+            "findClassByTeacherURL":"json/Open_queryForList_findClassByTeacher.json",
+            "findStuListURL":"json/Open_queryForList_findStuList.json",
+            "findClassDutySetURL":"json/Open_queryForList_findClassDutySet.json",
+           	"findWeekDayListURL":"json/Open_queryForList_findWeekDayList.json",
+            "addURL":"json/Duty_insert_insertDutyStu.json",
+            "menu":{	
+		    "buttons":[
+			    	{
+		        	"buttonName":"关闭",
+		        	"buttonStyle":"default",
+		        	"buttonImg":"remove",
+		        	"buttonStatus":"0",
+		        	"buttonLink":"dutyManage_add.close"
+			    	},
+			    	{
+		        	"buttonName":"保存",
+		        	"buttonStyle":"primary",
+		        	"buttonImg":"floppy-disk",
+		        	"buttonStatus":"0",
+		        	"buttonLink":"dutyManage_add.save"
+			    	}
+			]
+		}
+	}
+}

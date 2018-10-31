@@ -1,0 +1,42 @@
+<form class="form-horizontal form-horizontal-condensed" >
+		<div class="form-group">
+			<label class="col-sm-3 control-label"> &nbsp; 评测列表：</label> 
+			<div class="col-sm-8">
+			<select not-null="yes" class="form-control" ng-model="form.EXAMID" disabled="true"
+			 ng-options="Examinfo.EXAMID as Examinfo.EXAMNAME for Examinfo in ExamList">
+				<option value="">--请选择--</option>
+			</select>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-sm-3 control-label"> &nbsp; 评测科目：</label> 
+			<div class="col-sm-8">
+			<select not-null="yes" class="form-control" ng-model="form.FK_COURSE"  disabled="true"
+			ng-options="Courseinfo.FK_COURSE as Courseinfo.COURSENAME for Courseinfo in CourseList">
+				<option value="">--请选择--</option>
+			</select>
+			</div>
+		</div>
+
+		<div class="form-group" >
+			<label class="col-sm-3 control-label"> &nbsp; 分项名称：</label> 
+			<div class="col-sm-8">
+			<input not-null="yes"  class="form-control" type="text" ng-model="form.SCORESUMNAME">
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-sm-3 control-label"> &nbsp; 总分：</label> 
+			<div class="col-sm-8">
+			<input not-null="yes" class="form-control" type="text" ng-model="form.SUMSCORE">
+			</div>
+		</div>
+
+		<!-- <div class="form-group">
+			<label class="col-sm-3 control-label"> &nbsp; 分项备注：</label> 
+			<div class="col-sm-8">
+			<textarea  not-null="yes" class="form-control" ng-model="form.REMARK" ></textarea>
+			</div>
+		</div> -->
+	 </form>

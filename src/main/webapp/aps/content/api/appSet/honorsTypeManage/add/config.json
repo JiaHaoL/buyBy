@@ -1,0 +1,28 @@
+{
+    "name": "honorsTypeManage_add",
+    "viewUrl": "aps/content/api/appSet/honorsTypeManage/add/template.html",
+    "controllerUrl": "aps/content/api/appSet/honorsTypeManage/add/controller.js",
+    "config": 
+    {		
+    		"uploadurl":"http://rescenter.sjedu.cn/ResCenter/upload/Upload_fileUploadDomain_fileUploadDomain.json",
+ 			"addURL":"json/Open_insert_insertHonorsType.json",
+            "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"honorsTypeManage_add.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"honorsTypeManage_add.save"
+		        	}
+				]
+			}
+	}
+}

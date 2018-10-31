@@ -1,0 +1,11 @@
+{
+    "name": "assetManage",
+    "viewUrl": "aps/content/api/assetManage/list/template.html",
+    "controllerUrl": "aps/content/api/assetManage/list/controller.js",
+    "config": 
+    {
+             "findAssetManageinfoURL":"json/Open_queryForList_findAssetManageinfo.json",
+             "deleteAssetinfoURL":"json/Open_update_deleteAssetManageinfo.json"
+            
+	}
+}

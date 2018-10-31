@@ -1,0 +1,42 @@
+
+<table style="width:80%;margin-left: 10%;margin-top: 30px;" class="table table-hover " >
+	
+	<tr>
+		<td ><label>家长姓名：</label> </td>
+		<td >{{form.USER_SN}}</td>
+	</tr>
+	
+	<tr>
+		<td ><label>身份证号码：</label> </td>
+		<td >{{form.ID_NUMBER}}</td>
+	</tr>
+	
+	<tr>
+		<td ><label>邮箱：</label> </td>
+		<td >{{form.USER_EMAIL}}</td>
+	</tr>
+	
+	<tr>
+		<td ><label>手机：</label> </td>
+		<td >
+			{{form.USER_PHONE}}
+			<div class="INPUT_USER_PHONE" style="display: none;">
+			<input type="text" ng-model="form.USER_PHONE" />
+			<button class="btn btn-default btn-sm" ng-click="updatePhone()" type="button">更新</button>
+			</div>
+		</td>
+	</tr>
+	
+	<tr>
+		<td ><label>微信识别码：</label> </td>
+		<td >{{form.USER_WX}}</td>
+	</tr>
+	
+	<tr>
+		<td ><label>注册日期：</label> </td>
+		<td >{{form.CREATE_TIME | date:'yyyy-MM-dd' }}</td>
+	</tr>
+	
+	
+</table>
+

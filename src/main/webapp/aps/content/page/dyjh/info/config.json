@@ -1,0 +1,28 @@
+{
+    "name": "cms_document_info",
+    "viewUrl": "aps/content/page/dyjh/info/template.html",
+    "controllerUrl": "aps/content/page/dyjh/info/controller.js",
+    "config": 
+    {
+            "findByIdURL": "json/Open_queryForObject_dyjhFindById.json",
+            "findReplyByIdURL": "json/Open_queryForList_dyjhFindReplyById.json",
+            "updateURL": "json/Open_update_dyjhUpdate.json",
+            "addReplyURL": "json/Open_insert_dyjhReplyInsert.json",
+            "menu":{
+	            "buttons":[
+		        	{
+		            	"buttonName":"提交",
+		            	"buttonStyle":"primary",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_info.save"
+		        	},
+		        	{
+		            	"buttonName":"返回",
+		            	"buttonStyle":"default",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"cms_document_info.close"
+		        	}
+				]
+			}
+	}
+}

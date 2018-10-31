@@ -1,0 +1,12 @@
+{
+    "name": "classSet",
+    "viewUrl": "aps/content/api/appSet/classSet/list/template.html",
+    "controllerUrl": "aps/content/api/appSet/classSet/list/controller.js",
+    "config": 
+    {
+             "findURL2":"json/Open_queryForList_findClassInfoList.json",
+             "deleteURL":"json/Open_delete_deleteClassLogInfo.json",
+             "findURL":"json/Open_queryForList_findUnitSchoolList.json",
+             "addClassMottor":"json/Open_insert_addClassMottor.json"
+	}
+}

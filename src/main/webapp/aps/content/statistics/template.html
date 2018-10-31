@@ -1,0 +1,80 @@
+<form class="form-inline" rule="form" style="padding-top:15px;padding-bottom:25px">
+	<div style="margin-left: 20px" class="form-group">
+		<label class="" style="color: #444444"> &nbsp; 应用ID：</label> 
+		<input type="text" class="form-control" ng-model="form.appid" placeholder="应用ID"> 
+		
+		<label class="" style="color: #444444"> &nbsp; 分组ID：</label> 
+		<input type="text" class="form-control" ng-model="form.groupid" placeholder="分组ID"> 
+		
+		<label class="" style="color: #444444">&nbsp; 应用名称：</label> 
+		<input type="text" class="form-control" ng-model="form.appname" placeholder="应用名称">
+		
+		<label class="" style="color: #444444"> &nbsp; IP组名：</label> 
+		<input type="text" class="form-control" ng-model="form.groupname" placeholder="IP组名"> 
+
+		<button type="button" style="margin-left: 10px"
+			ng_click="product_typeClick()" class="btn btn-default">
+			<span class="glyphicon glyphicon-search"></span> 查询
+		</button>
+	</div>
+</form>
+<table class="table">
+	<thead style="background-color: #ffffff">
+		<tr>
+			<th column="CLASS_PERIOD" nowrap="nowrap" style="color: #268e88;"
+				ng-click="order($event.target)">应用ID</th>
+			<th column="PREPARE_LESSON_NAME" nowrap="nowrap" style="color: #268e88;"
+				ng-click="order($event.target)">分组ID</th>
+			<th column="PREPARE_LESSON_NAME" nowrap="nowrap" style="color: #268e88;"
+				ng-click="order($event.target)">IP组名</th>
+			<th nowrap="nowrap" column="FILE_TYPE" style="color: #268e88;"
+				ng-click="order($event.target)">应用名称</th>
+			<th nowrap="nowrap" column="CREATE_TIME" style="color: #268e88;"
+				ng-click="order($event.target)">总流量速率<br/>平均值</th>
+			<th nowrap="nowrap" column="CREATE_TIME" style="color: #268e88;"
+				ng-click="order($event.target)">进流量速率<br/>平均值</th>
+			<th nowrap="nowrap" column="CREATE_TIME" style="color: #268e88;"
+				ng-click="order($event.target)">出流量速率<br/>平均值</th>
+			<th nowrap="nowrap" column="CREATE_TIME" style="color: #268e88;"
+				ng-click="order($event.target)">总流量速率<br/>峰值</th>
+			<th nowrap="nowrap" column="CREATE_TIME" style="color: #268e88;"
+				ng-click="order($event.target)">总流量速率<br/>峰值时间戳</th>
+			<th nowrap="nowrap" column="CREATE_TIME" style="color: #268e88;"
+				ng-click="order($event.target)">进流量速率<br/>峰值</th>
+			<th nowrap="nowrap" column="CREATE_TIME" style="color: #268e88;"
+				ng-click="order($event.target)">进流量速率<br/>峰值</th>
+			<th nowrap="nowrap" column="CREATE_TIME" style="color: #268e88;"
+				ng-click="order($event.target)">出流量速率<br/>峰值</th>
+			<th nowrap="nowrap" column="CREATE_TIME" style="color: #268e88;"
+				ng-click="order($event.target)">出流量速率<br/>峰值时间戳</th>
+		</tr>
+	</thead>
+	<tbody ng-switch on="page.current_num"
+		style="background-color: #f2f2f2">
+		<tr ng-switch-when="0">
+			<td colspan="100" class="NoSelectHistory">查询无记录</td>
+		</tr>
+		<tr ng-repeat='data in dataList'>
+			<td style="font-size: 10px; color: #444444;">{{data.appid}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.groupid}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.groupname}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.appname}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.totalrateavg}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.inrateavg}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.outrateavg}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.totalratepeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.totalratepeak_time}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.inratepeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.inratepeak_time}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.outratepeak}}</td>
+			<td style="font-size: 10px; color: #444444;">{{data.outratepeak_time}}</td>
+		</tr>
+	</tbody>
+	<tfoot style="background-color: #edf0f4">
+		<tr>
+			<td colspan="100">
+				<div ng-include="'html/page.html'"></div>
+			</td>
+		</tr>
+	</tfoot>
+</table>

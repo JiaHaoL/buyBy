@@ -1,0 +1,55 @@
+
+  <div class="panel-body">
+<form class="form-inline" style="margin-bottom:10px;float: left;">
+
+  <div class="form-group">
+      开始日期：<input type="text" class="form-control input-sm datepicker"  ng-model="form.F_BEGIN_TIME" placeholder="请点击选择时间">
+  </div>
+  <div class="form-group">
+      结束日期：<input type="text" class="form-control input-sm datepicker"  ng-model="form.F_END_TIME" placeholder="请点击选择时间">
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="select()"> <span class="glyphicon glyphicon-search"></span> 查询 </button>
+</form>
+  
+<!-- Table -->
+<table class="table table-bordered">
+<thead>
+  <tr>
+    <th style="width: 20px;"><input type="checkbox" class="isCheckll" ng-click="checkAll($event.target)" /></th>
+       <th column="FK_STUDENT_NAME" ng-click="order($event.target)">班级名称</th>
+       <th column="USER_SN" ng-click="order($event.target)">学校简称</th>
+       <th column="USER_PHONE" ng-click="order($event.target)">班级通知</th>
+       <th column="USER_SN" ng-click="order($event.target)">班级相册</th>
+       <th column="ID_NUMBER" ng-click="order($event.target)">想想练练</th>
+       <th column="USER_EMAIL" ng-click="order($event.target)">学习辅导</th>
+       <th column="USER_PHONE" ng-click="order($event.target)">班级园地</th>
+       <th column="USER_WX" ng-click="order($event.target)">资源共享</th>
+     </tr>
+   </thead>
+   <tbody ng-switch on="page.current_num">
+   	<tr ng-switch-when="0">
+   		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+   	</tr>
+     <tr ng-repeat='row in dataList'>
+       <td><input type="checkbox" name="dataPk" value="{{row.PK_CLASSNEWS}}" /></td>
+       <td>{{row.CLASS_NAME }}</td>
+       <td>{{row.FK_UNIT_NAME }}</td>
+       <td>{{row.BJTZCOUNT }}</td>
+       <td>{{row.BJXCCOUNT }}</td>
+       <td>{{row.XXLLCOUNT }}</td>
+       <td>{{row.XXFDCOUNT }}</td>
+       <td>{{row.BJYDCOUNT }}</td>
+       <td>{{row.ZYGXCOUNT }}</td>
+     </tr>
+    
+   </tbody>
+   <tfoot>
+   	<tr>
+   		<td colspan="100">
+   		<div ng-include="'html/page.html'"></div>
+	</td>
+   	</tr>
+   </tfoot>
+</table>
+
+  </div>

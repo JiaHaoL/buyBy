@@ -1,0 +1,12 @@
+{
+    "name": "dutySet",
+    "viewUrl": "aps/content/api/appSet/dutySet/list/template.html",
+    "controllerUrl": "aps/content/api/appSet/dutySet/list/controller.js",
+    "config": 
+    {
+            "findGradeByTeacherURL":"json/Open_queryForList_findGradeByTeacherJH.json",
+            "findClassByTeacherURL":"json/Open_queryForList_findClassByTeacher.json",
+            "findClassDutySetURL":"json/Open_queryForList_findClassDutySet.json",
+            "deleteURL":"json/Open_update_deleteDuty.json"
+	}
+}

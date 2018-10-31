@@ -1,0 +1,30 @@
+{
+    "name": "dutyGroupManage_add",
+    "viewUrl": "aps/content/api/appSet/dutyGroupManage/add/template.html",
+    "controllerUrl": "aps/content/api/appSet/dutyGroupManage/add/controller.js",
+    "config": 
+    {		
+    		"findGradeByTeacherURL":"json/Open_queryForList_findGradeByTeacherJH.json",
+            "findClassByTeacherURL":"json/Open_queryForList_findClassByTeacher.json",
+            "findStuByClassURL":"json/Open_queryForList_findStuListByClass.json",
+            "addURL":"json/DutyGroup_insert_insertDutyGroup.json",
+             "menu":{	
+	            "buttons":[
+		        	{
+		            	"buttonName":"关闭",
+		            	"buttonStyle":"default",
+		            	"buttonImg":"remove",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"dutyGroupManage_add.close"
+		        	},
+		        	{
+		            	"buttonName":"保存",
+		            	"buttonStyle":"primary",
+		            	"buttonImg":"floppy-disk",
+		            	"buttonStatus":"0",
+		            	"buttonLink":"dutyGroupManage_add.save"
+		        	}
+				]
+			}
+	}
+}

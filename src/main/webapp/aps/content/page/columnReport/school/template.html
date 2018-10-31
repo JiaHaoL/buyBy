@@ -1,0 +1,54 @@
+
+  <div class="panel-body">
+<form class="form-inline" style="margin-bottom:10px;float: left;">
+  
+  <div class="form-group">
+      开始日期：<input type="text" class="form-control input-sm datepicker"  ng-model="form.F_BEGIN_TIME" placeholder="请点击选择时间">
+  </div>
+  <div class="form-group">
+      结束日期：<input type="text" class="form-control input-sm datepicker"  ng-model="form.F_END_TIME" placeholder="请点击选择时间">
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="select()"> <span class="glyphicon glyphicon-search"></span> 查询 </button>
+</form>
+  
+<!-- Table -->
+<table class="table table-bordered">
+<thead>
+  <tr>
+       <th column="SCHOOL_ABBREVIATION" ng-click="order($event.target)">学校简称</th>
+       <th column="BJCOUNT" ng-click="order($event.target)">班级数量</th>
+        <th column="XXGGCOUNT" ng-click="order($event.target)">校内公告</th>
+       <th column="BJTZCOUNT" ng-click="order($event.target)">班级通知</th>
+       <th column="BJXCCOUNT" ng-click="order($event.target)">班级相册</th>
+       <th column="XXLLCOUNT" ng-click="order($event.target)">想想练练</th>
+       <th column="XXFDCOUNT" ng-click="order($event.target)">学习辅导</th>
+       <th column="BJYDCOUNT" ng-click="order($event.target)">班级园地</th>
+      
+     </tr>
+   </thead>
+   <tbody ng-switch on="page.current_num">
+   	<tr ng-switch-when="0">
+   		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+   	</tr>
+     <tr ng-repeat='row in dataList'>
+       <td>{{row.SCHOOL_ABBREVIATION }}</td>
+       <td>{{row.BJCOUNT }}</td>
+       <td>{{row.XXGGCOUNT }}</td>
+       <td>{{row.BJTZCOUNT }}</td>
+       <td>{{row.BJXCCOUNT }}</td>
+       <td>{{row.XXLLCOUNT }}</td>
+       <td>{{row.XXFDCOUNT}}</td>
+       <td>{{row.BJYDCOUNT}}</td>
+     </tr>
+    
+   </tbody>
+   <tfoot>
+   	<tr>
+   		<td colspan="100">
+   		<div ng-include="'html/page.html'"></div>
+	</td>
+   	</tr>
+   </tfoot>
+</table>
+
+  </div>

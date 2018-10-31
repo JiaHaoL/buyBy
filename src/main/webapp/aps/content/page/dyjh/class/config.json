@@ -1,0 +1,10 @@
+{
+    "name": "app_page_dyjh_class",
+    "viewUrl": "aps/content/page/dyjh/class/template.html",
+    "controllerUrl": "aps/content/page/dyjh/class/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_dyjhClassList.json",
+            "infoURL": "aps/content/page/dyjh/info/config.json"
+	}
+}

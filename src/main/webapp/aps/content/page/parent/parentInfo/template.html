@@ -1,0 +1,53 @@
+
+  <div class="panel-body">
+<form class="form-inline" style="margin-bottom:10px;float: left;">
+  
+  <div class="form-group">
+    <input type="text" class="form-control"  ng-model="form.USER_SN" placeholder="家长姓名">
+  </div>
+ 
+  <button type="submit" class="btn btn-default" ng-click="select()"> <span class="glyphicon glyphicon-search"></span> 查询 </button>
+</form>
+  
+<!-- Table -->
+<table class="table table-hover ">
+<thead>
+  <tr>
+    <th style="width: 20px;"><input type="checkbox" class="isCheckll" ng-click="checkAll($event.target)" /></th>
+       <th column="FK_STUDENT_NAME" ng-click="order($event.target)">学生姓名</th>
+       <th column="USER_SN" ng-click="order($event.target)">家长姓名</th>
+       <th column="ID_NUMBER" ng-click="order($event.target)">身份证号码</th>
+       <th column="USER_EMAIL" ng-click="order($event.target)">邮箱</th>
+       <th column="USER_PHONE" ng-click="order($event.target)">手机</th>
+       <th column="USER_WX" ng-click="order($event.target)">微信</th>
+       <th column="CREATE_TIME" ng-click="order($event.target)">注册日期</th>
+       <th >查看详细</th>
+     </tr>
+   </thead>
+   <tbody ng-switch on="page.current_num">
+   	<tr ng-switch-when="0">
+   		<td colspan="100" class="NoSelectHistory">查询无记录</td>
+   	</tr>
+     <tr ng-repeat='row in dataList'>
+       <td><input type="checkbox" name="dataPk" value="{{row.PK_CLASSNEWS}}" /></td>
+       <td>{{row.FK_STUDENT_NAME }}</td>
+       <td>{{row.USER_SN }}</td>
+       <td>{{row.ID_NUMBER }}</td>
+       <td>{{row.USER_EMAIL }}</td>
+       <td>{{row.USER_PHONE }}</td>
+       <td>{{row.USER_WX }}</td>
+       <td>{{row.CREATE_TIME | date:'yyyy-MM-dd'  }}</td>
+       <td><a ng-click="searchParentDetail(row)"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 查看</a></td>
+     </tr>
+    
+   </tbody>
+   <tfoot>
+   	<tr>
+   		<td colspan="100">
+   		<div ng-include="'html/page.html'"></div>
+	</td>
+   	</tr>
+   </tfoot>
+</table>
+
+  </div>

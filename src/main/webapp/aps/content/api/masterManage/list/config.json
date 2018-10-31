@@ -1,0 +1,11 @@
+{
+    "name": "masterManage",
+    "viewUrl": "aps/content/api/masterManage/list/template.html",
+    "controllerUrl": "aps/content/api/masterManage/list/controller.js",
+    "config": 
+    {
+             "findMasterManageinfoURL":"json/Open_queryForList_findMasterManageinfo.json",
+             "deleteMasterinfoURL":"json/Open_update_deleteMasterManageinfo.json"
+            
+	}
+}

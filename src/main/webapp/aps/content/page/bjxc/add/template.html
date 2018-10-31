@@ -1,0 +1,33 @@
+<table >
+	<tr>
+		<td class="eWebEditor1" valign="top">
+		<form class="">
+		 
+		  <div class="form-group " style="margin-bottom: 10px;">
+		    <label> &nbsp; 图片类型：</label>
+           	<select class="form-control" ng-model="form.PK_PHOTOTYPE" 
+		      	ng-options="dic.DICTIONARY_PK as dic.DICTIONARY_NAME for dic in typesData ">
+				  <option value="">--请选择--</option>
+			  </select>
+		  </div>
+		  <br/>
+		   <div class="form-group " style="margin-bottom: 10px;">
+		    <label>上传资源：</label><label>{{form.ORI_FILENAME}}</label>
+		    <input type="file" name="fileload" id="uploadify" class="form-control"  />
+		    <div id="fileQueue"></div>
+		  </div>
+		  
+		  
+		  <div class="form-group " style="margin-bottom: 10px;">
+		    <label>相册描述：</label>
+		    <input type="text" style="width: 85%;" ng-model="form.DESCRIPTION" class="form-control" />
+		  </div>
+		  
+		</form>
+
+		</td>
+	</tr>
+	
+</table>
+  
+

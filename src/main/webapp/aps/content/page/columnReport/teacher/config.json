@@ -1,0 +1,9 @@
+{
+    "name": "app_page_columnReport_teacher",
+    "viewUrl": "aps/content/page/columnReport/teacher/template.html",
+    "controllerUrl": "aps/content/page/columnReport/teacher/controller.js",
+    "config": 
+    {
+            "findURL": "json/Open_queryForList_findSchoolTeacherReportList.json"
+	}
+}

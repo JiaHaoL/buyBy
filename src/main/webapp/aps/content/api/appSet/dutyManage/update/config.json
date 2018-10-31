@@ -1,0 +1,31 @@
+{
+    "name": "dutyManage_update",
+    "viewUrl": "aps/content/api/appSet/dutyManage/update/template.html",
+    "controllerUrl": "aps/content/api/appSet/dutyManage/update/controller.js",
+    "config": 
+    {		
+    		"findByIdURL":"json/Open_queryForObject_findDutyStuByPk.json",
+            "findStuListURL":"json/Open_queryForList_findStuList.json",
+            "findClassDutySetURL":"json/Open_queryForList_findClassDutySet.json",
+           	"findWeekDayListURL":"json/Open_queryForList_findWeekDayList.json",
+            "updateURL":"json/Open_update_updateDutyStu.json",
+            "menu":{	
+		    "buttons":[
+			    	{
+		        	"buttonName":"关闭",
+		        	"buttonStyle":"default",
+		        	"buttonImg":"remove",
+		        	"buttonStatus":"0",
+		        	"buttonLink":"dutyManage_update.close"
+			    	},
+			    	{
+		        	"buttonName":"保存",
+		        	"buttonStyle":"primary",
+		        	"buttonImg":"floppy-disk",
+		        	"buttonStatus":"0",
+		        	"buttonLink":"dutyManage_update.save"
+			    	}
+			]
+		}
+	}
+}

@@ -1,0 +1,55 @@
+
+<div style="margin-left:10%;margin-top:30px;margin-rigth:10%">
+<form id="debugForm" name="debugForm" method="post" action="">
+	<table style="width: 85%" >
+		<tr style="line-height: 40px;">
+			<td>一、接口类型：</td>
+			<td>
+				<select class="form-control">
+				  <option>基础信息获取</option>
+				</select>
+			</td>
+		</tr>
+		<tr style="line-height: 40px;">
+			<td>二、接口列表：</td>
+			<td>
+				<select  class="form-control xbclass" ng-model="form.INTERFACE_PK"  ng-options="inter.INTERFACE_PK as inter.INTERFACE_NAME for inter in interfaceList" ng-click="change()">
+					<option value="">--请选择--</option>
+				</select>
+			</td>
+		</tr>
+		<tr style="line-height: 40px;">
+			<td valign="top">三、参数列表：</td>
+			<td></td>
+		</tr>
+		<tr style="line-height: 40px;">
+			<td>return_type：</td>
+			<td>
+				<select name="return_type">
+				  <option value="json" selected="selected">json</option>
+				  <!-- <option value="xml">xml</option> -->
+				</select>
+			</td>
+		</tr>
+		<tbody class="accessToken" >
+			<tr ng-repeat='data in paramsList'>
+				<td>{{data.PARAMS}}</td>     
+				<td>
+					<input class="form-control {{data.PARAMS}}"  name="{{data.PARAMS}}" type="text" id="inter{{data.INTERFACE_PARAMS_PK}}" >
+				</td>
+			</tr>
+		</tbody>
+		
+		<tr style="line-height: 40px;">
+			<td></td>
+			<td> <button type="button" class="btn btn-default" ng-click="check()"> 检查 </button> </td>
+		</tr>
+	</table>
+</form>
+	
+	<br/>
+	
+	<pre style="margin-rigth:10%" id="jsonContent"></pre>
+</div>
+
+
