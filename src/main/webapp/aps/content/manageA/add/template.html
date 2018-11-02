@@ -1,0 +1,13 @@
+
+<select class="form-control xbclass" not-null="yes" ng-model="form.type">
+	  <option value="0">基础题</option>
+      <option value="1">简答题</option>
+      <option value="2">SQL题</option>
+      <option value="3">其他</option>
+</select>
+
+<input class="form-control" type="text" ng-model="form.title" >
+
+<div id="design_argument" name="design_argument" type="text/plain" style="width:100%;height:480px;">
+
+<button ng-click="save()" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 保存</button>

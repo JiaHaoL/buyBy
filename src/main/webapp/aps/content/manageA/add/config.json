@@ -1,0 +1,10 @@
+{
+    "name": "for2W_add",
+    "viewUrl": "aps/content/manageA/add/template.html",
+    "controllerUrl": "aps/content/manageA/add/controller.js",
+    "config": 
+    {
+         "getURL":"json/Open_queryForList_getTwoWWAll.json",
+         "saveURL":"json/Open_insert_saveTwoWW.json"
+	}
+}

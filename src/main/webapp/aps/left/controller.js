@@ -51,8 +51,8 @@
             		data.MENU_PK = "none";
             		if(menu == "1"){
             			var m2 = {
-        						"url" : "aps/content/statistics/config.json",
-        						text:"应用统计",
+        						"url" : "aps/content/manageA/list/config.json",
+        						text:"管理文章",
         						size:"modal-lg",
         						"contentName" : "content"
         					}

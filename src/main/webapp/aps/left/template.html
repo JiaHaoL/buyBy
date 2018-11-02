@@ -1,19 +1,6 @@
 <div id="sidebar" class="page-sidebar" style="background-image: linear-gradient(to bottom, #eaeaea 0%, #eaeaea 100%)">
-    <!-- <div class="shortcuts">
-        <ul>
-            
-            <li><a href="#" title="" class="tip" data-original-title="Database backup"><i class="s24 glyphicon glyphicon-save"></i></a>
-            </li>
-            <li><a href="" title="" class="tip" data-original-title="Sales statistics"><i class="s24 glyphicon glyphicon-print"></i></a>
-            </li>
-            <li><a  title="" class="tip" data-original-title="Support section"><i class="s24 glyphicon glyphicon-file"></i></a>
-            </li>
-            <li><a title="" class="tip" data-original-title="Write post"><i class="s24 glyphicon glyphicon-pencil"></i></a>
-            </li>
-        </ul>
-    </div> -->
-    <!-- End search -->
-    <!-- Start .sidebar-inner -->
+   
+
     <div class="sidebar-inner">
         <!-- Start .sidebar-scrollarea -->
         <div class="sidebar-scrollarea">
@@ -24,116 +11,23 @@
                 <!-- End .sidenav-widget -->
                 <div class="mainnav show-arrows">
                     <ul>
-                       <!--  <li><a href="index.html" class="active" style="background-image: linear-gradient(to bottom, #eaeaea 0%, #eaeaea 100%)">
-                        <i class="glyphicon glyphicon-search" style="margin-left:20px;"></i>
-                        <span class="txt">导航首页</span> </a>
-                        </li> -->
+                      
                         
                         <li class="hasSub menuPk"  >
                             <a href="#" class="notExpand" style="background-image: linear-gradient(to bottom, #eaeaea 0%, #eaeaea 100%)"> <i class="glyphicon" style="padding-left:10px;padding-right:5px;"></i><span class="txt" style="color: #268e88;"> 导航首页</span></a>
                             <ul class="sub">
                                 <li >
-                                	<a ng-click="clickMenu(1)" class="menuPk"  style="font-size: 13px; color: #444444; background-image: linear-gradient(to bottom, #eaeaea 0%, #eaeaea 100%)"><i class="s16 icomoon-icon-arrow-right-3"></i><span class="txt">应用统计</span></a>
+                                	<a ng-click="clickMenu(1)" class="menuPk"  style="font-size: 13px; color: #444444; background-image: linear-gradient(to bottom, #eaeaea 0%, #eaeaea 100%)"><i class="s16 icomoon-icon-arrow-right-3"></i><span class="txt">管理文章</span></a>
                                 </li>
-                                 <li >
-                                	<a ng-click="clickMenu(2)" class="menuPk"  style="font-size: 13px; color: #444444; background-image: linear-gradient(to bottom, #eaeaea 0%, #eaeaea 100%)"><i class="s16 icomoon-icon-arrow-right-3"></i><span class="txt">流量攻击扫描</span></a>
-                                </li>
+                                
                             </ul>
                         </li>
                         
-                        <!-- <li ng-repeat="m1 in menuData | filter :{ MENU_FATHER_PK: '1fbc27c08c244a29841b7ad55dd41a2f' } | orderBy: 'MENU_CODE' "  
-                        	   class="hasSub menuPk-{{m1.MENU_PK}}"  >
-                            <a href="#" class="notExpand" style="background-image: linear-gradient(to bottom, #eaeaea 0%, #eaeaea 100%)"> <i class="glyphicon glyphicon-{{m1.MENU_IMG}}" style="padding-left:10px;padding-right:5px;"></i><span class="txt" style="color: #268e88;"> {{m1.MENU_NAME}}</span></a>
-                            <ul class="sub">
-                                <li ng-repeat='m2 in menuData | filter :{ MENU_FATHER_PK:m1.MENU_PK } | orderBy: "MENU_CODE" ' >
-                                	<a ng-click="clickMenu(m2)" class="menuPk-{{m2.MENU_PK}}"  style="font-size: 13px; color: #444444; background-image: linear-gradient(to bottom, #eaeaea 0%, #eaeaea 100%)"><i class="s16 icomoon-icon-arrow-right-3"></i><span class="txt">{{m2.MENU_NAME}}</span></a>
-                                </li>
-                            </ul>
-                        </li> -->
-                      
-                        <!--li class="hasSub">
-                            <a href="#" class="notExpand"><i class="icomoon-icon-arrow-down-2 s16 hasDrop"></i><i class="s16 icomoon-icon-folder"></i><span class="txt">Pages</span><span class="notification blue">11</span></a>
-                            <ul class="sub">
-                                <li><a href="blank.html"><i class="s16 icomoon-icon-file-2"></i><span class="txt">Blank page</span></a>
-                                </li>
-                                <li><a href="calendar.html"><i class="s16 icomoon-icon-calendar"></i><span class="txt">Calendar</span></a>
-                                </li>
-                                <li><a href="gallery.html"><i class="s16 icomoon-icon-image-2"></i><span class="txt">Gallery</span></a>
-                                </li>
-                            </ul>
-                        </li-->
+                    
                     </ul>
                 </div>
             </div>
-            <!-- End sidenav >
-            <div class="sidebar-widget">
-                <h6 class="title">今日作业完成情况</h6>
-                <div class="content clearfix">
-                    <i class="glyphicon glyphicon-edit pull-left mr10"></i>
-                    <div class="progress progress-bar-xs pull-left mt5 tip" title="" data-original-title="87%">
-                        <div class="progress-bar progress-bar-info" style="width: 87%;"></div>
-                    </div>
-                    <span class="percent pull-right">87%</span>
-                    <div class="stat">69 / 80 题</div>
-                </div>
-            </div-->
-         
-            <!-- End .sidenav-widget >
-            <div class="sidebar-widget">
-                <h6 class="title">作题情况分析</h6>
-                <div class="content">
-                    <div class="stats">
-                        <div class="item">
-                            <div class="head clearfix">
-                                <div class="txt">优秀率</div>
-                            </div>
-                            <i class="s16 glyphicon glyphicon-arrow-up pull-left"></i>&nbsp;
-                            <div class="number">2%</div>
-                            <div class="change">
-                                <i class="glyphicon glyphicon-triangle-top color-green"></i>
-                                1%
-                            </div>
-                            <span id="stat1" class="spark"><img src="assets/img/patterns/up.png" width="34" height="15" style="display: inline-block; width: 34px; height: 15px; vertical-align: top;"></img></span>
-                        </div>
-                        <div class="item">
-                            <div class="head clearfix">
-                                <div class="txt">通过率</div>
-                            </div>
-                            <i class="s16 glyphicon glyphicon-play pull-left"></i>
-                            <div class="number">78%</div>
-                            <div class="change">
-                                <i class="glyphicon glyphicon-triangle-top color-green"></i>
-                                8%
-                            </div>
-                            <span id="stat2" class="spark"><img src="assets/img/patterns/up.png"  width="34" height="15" style="display: inline-block; width: 34px; height: 15px; vertical-align: top;"></img></span>
-                        </div>
-                        <div class="item">
-                            <div class="head clearfix">
-                                <div class="txt">低分率</div>
-                            </div>
-                            <i class="s16 glyphicon glyphicon-arrow-down pull-left"></i>
-                            <div class="number">4%</div>
-                            <div class="change">
-                                <i class="glyphicon glyphicon-triangle-bottom color-red"></i>
-                                1%
-                            </div>
-                            <span id="stat3" class="spark"><img src="assets/img/patterns/down.png" width="34" height="15" style="display: inline-block; width: 34px; height: 15px; vertical-align: top;"></img></span>
-                        </div>
-                        <div class="item">
-                            <div class="head clearfix">
-                                <div class="txt">得分率</div>
-                            </div>
-                            <i class="s16 glyphicon glyphicon-check pull-left"></i>
-                            <div class="number">84%</div>
-                            <div class="change">
-                                <i class="glyphicon glyphicon-triangle-top color-green"></i>
-                                4%
-                            </div>
-                            <span id="stat4" class="spark"><img src="assets/img/patterns/up.png"  width="34" height="15" style="display: inline-block; width: 34px; height: 15px; vertical-align: top;"></img></span>
-                        </div>
-                    </div>
-                </div>
-            </div-->
+          
            
             <!-- End .sidenav-widget -->
         </div>

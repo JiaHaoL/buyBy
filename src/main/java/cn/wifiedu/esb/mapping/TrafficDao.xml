@@ -4,6 +4,53 @@
   <resultMap id="BaseResultMap" type="java.util.HashMap" ></resultMap>
   <parameterMap id="BaseParameterMap" type="java.util.HashMap" ></parameterMap>
   
+  <insert id="saveTwoWW"  parameterMap="BaseParameterMap">
+  	insert into 2w
+  	(
+		title,
+		type,
+		content,
+		create_time,
+		delete_flag
+  	)
+  	values
+  	(
+  		#{title},
+  		#{type},
+  		#{content},
+  		now(),
+  		'0'
+  	)
+  </insert>
+  
+  <select id="getTwoWWAll" resultMap="BaseResultMap" parameterMap="BaseParameterMap">
+  	select
+  		t2.id,
+		t2.title,
+		t2.type,
+		t2.content,
+		t2.create_time,
+		(select id from 2w t1 where delete_flag = '0' and t1.id &lt; t2.id limit 0,1) upid,
+		(select id from 2w t1 where delete_flag = '0' and t1.id &gt; t2.id limit 0,1) downid,
+		(select title from 2w t1 where delete_flag = '0' and t1.id &lt; t2.id limit 0,1) uptitle,
+		(select title from 2w t1 where delete_flag = '0' and t1.id &gt; t2.id limit 0,1) downtitle
+	from 2w t2
+	where delete_flag = '0'
+	<if test="id != null and id != '' ">
+		AND id = #{id}
+	</if>
+  </select>
+  
+  <select id="getTwoWWAllSize" resultType="java.lang.Integer" parameterMap="BaseParameterMap">
+  	select
+  		count(1)
+	from 2w
+	where delete_flag = '0'
+	<if test="id != null and id != '' ">
+		AND id = #{id}
+	</if>
+  </select>
+  
   <select id="getTrafficStatisticsInfo" resultMap="BaseResultMap" parameterMap="BaseParameterMap">
   	SELECT 
 		groupid,

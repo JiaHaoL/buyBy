@@ -1,0 +1,9 @@
+{
+    "name": "for2W_info",
+    "viewUrl": "aps/content/manageA/info/template.html",
+    "controllerUrl": "aps/content/manageA/info/controller.js",
+    "config": 
+    {
+         "getURL":"json/Open_queryForList_getTwoWWAll.json"
+	}
+}

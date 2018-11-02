@@ -29,8 +29,12 @@
                templateUrl: 'html/main.html',
                controller: 'MainController'
              })
-             .when('/ClassApp/', {
+             .when('/2w/', {
                templateUrl: 'html/ClassApp.html',
+               controller: 'MainController'
+             })
+             .when('/detail/:pk', {
+               templateUrl: 'html/detail.html',
                controller: 'MainController'
              })
              .when('/StudentTj/:CLASSID/:COURSEID', {

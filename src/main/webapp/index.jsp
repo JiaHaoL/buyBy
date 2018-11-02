@@ -77,7 +77,7 @@ if(userIno == null){
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	
-    <title>上海教委</title>
+    <title>2w</title>
     <base href="<%=basePath %>" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdn.sjedu.cn/js/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
@@ -113,6 +113,8 @@ if(userIno == null){
   <script type="text/javascript" src="https://cdn.sjedu.cn/js/util.js?v=5.1"></script>
   <script data-main="config/loader.js?v=5.1" src="https://cdn.sjedu.cn/js/require/require.min.js"></script>
   <script type="text/javascript" src="https://cdn.sjedu.cn/js/zTree/js/jquery.ztree.all-3.5.min.js?v=5"></script>
+  <script type="text/javascript" src="js/ueditor/ueditor.config.js"></script>
+  <script type="text/javascript" src="js/ueditor/ueditor.all.js"></script>
   <script type="text/javascript" src="config/app.js"></script>
   
 </html>

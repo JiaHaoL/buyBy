@@ -1,21 +1,18 @@
 (function() {
-    define(['pageController'], function() {
+    define([], function() {
         return [
-            '$scope','httpService','config','params','$routeParams','eventBusService','controllerName','loggingService', 
-            function($scope,$httpService,config,params,$routeParams,eventBusService,controllerName,loggingService) {
-            	console.log(controllerName,"loaded");
+            '$scope','$location','httpService','config', 'eventBusService','controllerName','loggingService', function($scope,$location,$httpService,config, eventBusService,controllerName,loggingService) {
             	$scope.form = {};
             	
             	$scope.titleInfo = function(obj){
-            		console.log(obj);
             		//跳转窗口
             		var m2 = {
-            				  url:"classapp/info/config.json?id="+obj.id+"&3=3",
+            				  url:"aps/content/manageA/info/config.json?id="+obj.id+"&3=3",
             		          text:""+obj.title,
             		          size:"modal-lg",
-            		          contentName:"content"
+            		          contentName:"modal"
             		}   
-            		eventBusService.publish(controllerName,'appPart.load.content', m2);
+            		eventBusService.publish(controllerName,'appPart.load.modal', m2);
             	}
             	
             	eventBusService.subscribe(controllerName, controllerName+'.close', function(event, btn) {
