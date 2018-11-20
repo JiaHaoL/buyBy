@@ -4,6 +4,6 @@
     "controllerUrl": "classapp/test/controller.js",
     "config": 
     {
-         "getURL":"json/Open_queryForList_getTwoWWAll.json"
+         "getURL":""
 	}
 }

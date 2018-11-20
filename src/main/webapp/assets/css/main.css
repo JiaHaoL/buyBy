@@ -1,4 +1,4 @@
-.pagination-sm{
+/* /* .pagination-sm{
 	margin:2px;
 	float:right;
 }
@@ -24,10 +24,10 @@ table.table thead .sorting_asc {
 table.table thead .sorting_desc {
 	background: url(../img/order-desc.png) no-repeat center right;
 }
-/* -----------------------------------------
+-----------------------------------------
    Template helpers
------------------------------------------ */
-/* ------------------ Sizes --------------------*/
+-----------------------------------------
+------------------ Sizes --------------------
 .s8 {
   font-size: 8px !important;
 }
@@ -55,7 +55,7 @@ table.table thead .sorting_desc {
 .s64 {
   font-size: 64px !important;
 }
-/* ------------------ Vertical align --------------------*/
+------------------ Vertical align --------------------
 .vat {
   vertical-align: top !important;
 }
@@ -65,7 +65,7 @@ table.table thead .sorting_desc {
 .vab {
   vertical-align: bottom !important;
 }
-/* ------------------ Margins --------------------*/
+------------------ Margins --------------------
 .row.no-padding {
   margin-left: 0;
   margin-right: 0;
@@ -184,7 +184,7 @@ table.table thead .sorting_desc {
 .ml30 {
   margin-left: 30px !important;
 }
-/* Minus margins */
+Minus margins
 .mlm5 {
   margin-top: -5px !important;
 }
@@ -245,7 +245,7 @@ table.table thead .sorting_desc {
 .mbm25 {
   margin-top: -25px !important;
 }
-/* ------------------ Paddings --------------------*/
+------------------ Paddings --------------------
 .p0 {
   padding: 0 !important;
 }
@@ -336,7 +336,7 @@ table.table thead .sorting_desc {
 .pl25 {
   padding-left: 25px !important;
 }
-/* ------------------ Percent widths --------------------*/
+------------------ Percent widths --------------------
 .per5 {
   width: 5% !important;
 }
@@ -397,7 +397,7 @@ table.table thead .sorting_desc {
 .per100 {
   width: 100% !important;
 }
-/* ------------------ Borders --------------------*/
+------------------ Borders --------------------
 .b {
   border: 1px solid #c4c4c4 !important;
 }
@@ -464,7 +464,7 @@ table.table thead .sorting_desc {
 .bbdashed {
   border-bottom: 1px dashed #c4c4c4 !important;
 }
-/* ------------------ Colors --------------------*/
+------------------ Colors --------------------
 .color-red {
   color: #ed7a53 !important;
 }
@@ -522,7 +522,7 @@ table.table thead .sorting_desc {
 .color-gray-dark {
   color: #333333 !important;
 }
-/* ------------------ Backgrounds --------------------*/
+------------------ Backgrounds --------------------
 .white-bg {
   color: #333333 !important;
   background-color: #ffffff !important;
@@ -607,14 +607,14 @@ table.table thead .sorting_desc {
   color: #ffffff !important;
   background-color: #17242f !important;
 }
-/* ------------------ Opacity --------------------*/
+------------------ Opacity --------------------
 .opacity {
   opacity: 1 !important;
 }
 .opacity0 {
   opacity: 0 !important;
 }
-/* ------------------ Typo --------------------*/
+------------------ Typo --------------------
 .strong {
   font-weight: bold;
 }
@@ -630,7 +630,7 @@ table.table thead .sorting_desc {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* ------------------ Contextual colors --------------------*/
+------------------ Contextual colors --------------------
 .text-muted {
   color: #777777;
 }
@@ -683,14 +683,14 @@ a.text-dark:hover,
 a.text-dark:focus {
   color: #0e171e;
 }
-/* ------------------ Positions --------------------*/
+------------------ Positions --------------------
 .relative {
   position: relative;
 }
 .absolute {
   position: absolute;
 }
-/* ------------------ Rotate helpers --------------------*/
+------------------ Rotate helpers --------------------
 .rotate0 {
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -816,7 +816,7 @@ a.text-dark:focus {
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
-/* ------------------ Other --------------------*/
+------------------ Other --------------------
 .bshadowNone {
   box-shadow: none !important;
 }
@@ -829,10 +829,10 @@ a.text-dark:focus {
 .db {
   display: block !important;
 }
-/* -----------------------------------------
+-----------------------------------------
    Body styles
------------------------------------------ */
-/*  IE10 and windows phone 8 fix. */
+-----------------------------------------
+ IE10 and windows phone 8 fix.
 @-webkit-viewport {
   width: device-width;
 }
@@ -989,9 +989,9 @@ body #wrapper {
   min-height: 100px;
   position: relative;
 }
-/* -----------------------------------------
+-----------------------------------------
    Header styles
------------------------------------------ */
+-----------------------------------------
 #app_top {
   height: 66px;
   box-shadow: 0 1px 0px #ffffff;
@@ -1052,8 +1052,8 @@ body #wrapper {
   border: none;
   background: url('../img/patterns/4.png') repeat;
   border-bottom: 1px solid #c4c4c4;
-  /*  .transition(all);
-       .transition-duration(0.3s); */
+   .transition(all);
+       .transition-duration(0.3s);
 }
 #app_top .navbar .navbar-brand {
   padding: 0 20px 0;
@@ -1067,8 +1067,8 @@ body #wrapper {
   line-height: 62px;
   float: left;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
-  /*  .transition(all);
-           .transition-duration(0.3s); */
+   .transition(all);
+           .transition-duration(0.3s);
 }
 #app_top .navbar .navbar-brand .slogan {
   font-size: 14px;
@@ -1076,8 +1076,8 @@ body #wrapper {
 }
 #app_top .navbar .nav {
   margin: 15px 10px 5px 20px;
-  /*  .transition(all);
-           .transition-duration(0.3s); */
+   .transition(all);
+           .transition-duration(0.3s);
 }
 #app_top .navbar .nav > li {
   display: block;
@@ -1329,7 +1329,7 @@ body #wrapper {
 #app_top .navbar .nav > li.dropdown .dropdown-menu .header {
   font-size: 13px;
 }
-/*Responsive buttons*/
+Responsive buttons
 .resBtn {
   position: absolute;
   top: 15px;
@@ -1390,10 +1390,10 @@ body #wrapper {
 .collapseBtn {
   height: 36px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Left Sidebar styles
------------------------------------------ */
-/*Left sidebar*/
+-----------------------------------------
+Left sidebar
 #sidebarbg {
   left: 0;
   z-index: 10;
@@ -1617,7 +1617,7 @@ body #wrapper {
   text-decoration: none;
 }
 #sidebar .sidenav .mainnav ul li .sub {
-  /*display: none;*/
+  display: none;
   float: left;
   margin-top: 0px;
   width: 100%;
@@ -1820,9 +1820,9 @@ body #wrapper {
 #sidebar.collapse-sidebar .sidebar-widget {
   display: none;
 }
-/*-----------------------------------------
+-----------------------------------------
    Right Sidebar styles
------------------------------------------ */
+-----------------------------------------
 #right-sidebarbg {
   right: 0;
   z-index: 10;
@@ -1865,9 +1865,9 @@ body #wrapper {
   width: auto;
   height: 100%;
 }
-/* -----------------------------------------
+-----------------------------------------
    Content
------------------------------------------ */
+-----------------------------------------
 #content {
   padding: 67px 25px 50px 25px;
   min-height: 100%;
@@ -1978,9 +1978,9 @@ body #wrapper {
   top: 15px;
   left: 18px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Page footer
------------------------------------------ */
+-----------------------------------------
 #footer {
   padding: 15px 20px;
   border-top: 1px solid #c4c4c4;
@@ -2009,9 +2009,9 @@ body #wrapper {
   width: 100%;
   margin-left: 210px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Page header
------------------------------------------ */
+-----------------------------------------
 .page-header {
   padding-bottom: 0;
   margin: 20px 0 15px;
@@ -2025,9 +2025,9 @@ body #wrapper {
   margin-top: -48px;
   float: right;
 }
-/* -----------------------------------------
+-----------------------------------------
    Progressbars
------------------------------------------ */
+-----------------------------------------
 .progress {
   height: 15px;
   margin-top: 8px;
@@ -2121,10 +2121,10 @@ body #wrapper {
 .progress.white {
   background-color: #ffffff;
 }
-/* -----------------------------------------
+-----------------------------------------
    Notifications
------------------------------------------ */
-/*Red style*/
+-----------------------------------------
+Red style
 .notification {
   padding: 0px 7px 0px 7px;
   color: #fff;
@@ -2140,8 +2140,8 @@ body #wrapper {
   right: -10px;
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
   text-shadow: none;
-  /*green style*/
-  /*blue style*/
+  green style
+  blue style
 }
 .notification.green {
   background: #9fc569;
@@ -2149,17 +2149,17 @@ body #wrapper {
 .notification.blue {
   background: #88bbc8;
 }
-/* -----------------------------------------
+-----------------------------------------
    Sidebar widget
------------------------------------------ */
+-----------------------------------------
 .sidebar-widget {
   position: relative;
   margin: -1px 0 10px 0;
   display: block;
   float: left;
   width: 100%;
-  /*Sidebar Widget stats*/
-  /*Rightnow stats style*/
+  Sidebar Widget stats
+  Rightnow stats style
 }
 .sidebar-widget .content {
   padding: 0px 10px;
@@ -2254,9 +2254,9 @@ body #wrapper {
   text-align: right;
   color: #2C7282;
 }
-/* -----------------------------------------
+-----------------------------------------
    BackToTop
------------------------------------------ */
+-----------------------------------------
 #back-to-top {
   display: none;
   text-decoration: none;
@@ -2283,12 +2283,12 @@ body #wrapper {
   display: block;
   overflow: hidden;
 }
-/* -----------------------------------------
+-----------------------------------------
    Flot chart tooltips
------------------------------------------ */
+-----------------------------------------
 #flotTip {
-  /* white-space: nowrap;
-    display: inline-block; */
+  white-space: nowrap;
+    display: inline-block;
   max-width: 150px;
   padding: 3px 8px;
   color: #ffffff;
@@ -2309,14 +2309,14 @@ body #wrapper {
   text-align: center;
   font-weight: normal;
 }
-/* Fix incorrect position */
+Fix incorrect position
 .tooltip.top,
 .tooltip.bottom {
   margin-left: 0;
 }
-/* -----------------------------------------
+-----------------------------------------
    Portlets
------------------------------------------ */
+-----------------------------------------
 .panel {
   box-shadow: 0 1px 0px #ffffff;
   margin-bottom: 25px;
@@ -2572,9 +2572,9 @@ body #wrapper {
   border-radius: 2px;
   visibility: visible !important;
 }
-/* -----------------------------------------
+-----------------------------------------
    Sparklines
------------------------------------------ */
+-----------------------------------------
 .spark {
   display: inline-block;
   margin-left: 20px;
@@ -2613,9 +2613,9 @@ body #wrapper {
   display: inline-block;
   margin-bottom: 5px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Easy pie charts
------------------------------------------ */
+-----------------------------------------
 .easyPieChart {
   position: relative;
   text-align: center;
@@ -2665,9 +2665,9 @@ body #wrapper {
 .pie-charts.yellow-pie div.label {
   color: #f4ad49;
 }
-/* -----------------------------------------
+-----------------------------------------
    Knobs - Circular progress stats
------------------------------------------ */
+-----------------------------------------
 .circle-stats {
   text-align: center;
   margin-top: -5px;
@@ -2701,7 +2701,7 @@ body #wrapper {
 .circle-stats .circular-item input:focus {
   outline: 0;
   outline: thin dotted 0;
-  /* IE6-9 */
+  IE6-9
   box-shadow: none;
 }
 .circle-stats .circular-progress-item {
@@ -2724,13 +2724,13 @@ body #wrapper {
 .circle-stats .circular-progress-item input:focus {
   outline: 0;
   outline: thin dotted 0;
-  /* IE6-9 */
+  IE6-9
   box-shadow: none;
 }
-/* -----------------------------------------
+-----------------------------------------
    Labels
------------------------------------------ */
-/* Flot pie chart labes */
+-----------------------------------------
+Flot pie chart labes
 .pie-chart-label {
   font-size: 12px;
   text-align: center;
@@ -2744,9 +2744,9 @@ body #wrapper {
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.3);
   opacity: 0.8;
 }
-/* -----------------------------------------
+-----------------------------------------
    Buttons
------------------------------------------ */
+-----------------------------------------
 .btn {
   transition: background;
   transition-duration: 0.4s;
@@ -2918,9 +2918,9 @@ body #wrapper {
   float: left;
   margin-top: 5px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Stats buttons
------------------------------------------ */
+-----------------------------------------
 .stats-btn {
   text-align: center;
   position: relative;
@@ -2977,9 +2977,9 @@ body #wrapper {
   padding: 0 6px 1px 6px;
   z-index: 9;
 }
-/* -----------------------------------------
+-----------------------------------------
    Dropdown menus
------------------------------------------ */
+-----------------------------------------
 .dropdown-menu {
   border-radius: 2px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.175);
@@ -3035,9 +3035,9 @@ body #wrapper {
   right: auto !important;
   left: 29px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Tabs
------------------------------------------ */
+-----------------------------------------
 .tabs .nav-tabs {
   position: relative;
   background-image: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 100%);
@@ -3317,9 +3317,9 @@ body #wrapper {
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
 }
-/* -----------------------------------------
+-----------------------------------------
   Panel groups -  Accordions
------------------------------------------ */
+-----------------------------------------
 .panel-group .panel {
   border-radius: 2px;
 }
@@ -3347,9 +3347,9 @@ body #wrapper {
 .panel-group .panel.panel-default .panel-title {
   color: #333333;
 }
-/* -----------------------------------------
+-----------------------------------------
    Modals
------------------------------------------ */
+-----------------------------------------
 .modal {
   overflow-x: hidden;
   margin: 0;
@@ -3459,9 +3459,9 @@ body #wrapper {
   -ms-transform: scale(1) !important;
   transform: scale(1) !important;
 }
-/* -----------------------------------------
+-----------------------------------------
    Alerts
------------------------------------------ */
+-----------------------------------------
 .alert {
   width: 100%;
   margin: 0 0 15px 0;
@@ -3530,9 +3530,9 @@ body #wrapper {
 .alert.alert-info .close:focus {
   color: #1f7aa8;
 }
-/* -----------------------------------------
+-----------------------------------------
    Callout
------------------------------------------ */
+-----------------------------------------
 .bs-callout-danger {
   display: block;
   margin: 20px 0;
@@ -3681,9 +3681,9 @@ body #wrapper {
 .bs-callout-success .close:focus {
   color: #8cba4c;
 }
-/* -----------------------------------------
+-----------------------------------------
    List groups
------------------------------------------ */
+-----------------------------------------
 .list-group .list-group-item {
   transition: all;
   transition-duration: 0.4s;
@@ -3735,9 +3735,9 @@ body #wrapper {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec693c', endColorstr='#ffec8765', GradientType=0);
 }
-/* -----------------------------------------
+-----------------------------------------
    Circfull progress bars
------------------------------------------ */
+-----------------------------------------
 .circliful {
   position: relative;
   float: left;
@@ -3762,9 +3762,9 @@ body #wrapper {
   margin: 5px 3px 0 3px;
   position: relative;
 }
-/* -----------------------------------------
+-----------------------------------------
    Popovers
------------------------------------------ */
+-----------------------------------------
 .popover {
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -3777,25 +3777,25 @@ body #wrapper {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff3f3f3', GradientType=0);
 }
-/* -----------------------------------------
+-----------------------------------------
    WElls
------------------------------------------ */
+-----------------------------------------
 .well {
   border-radius: 2px;
   background-image: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff3f3f3', GradientType=0);
 }
-/* -----------------------------------------
+-----------------------------------------
    Jumbotron
------------------------------------------ */
+-----------------------------------------
 .jumbotron {
   border-radius: 2px;
   padding: 30px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Nav pills
------------------------------------------ */
+-----------------------------------------
 .nav-pills > li > a {
   border: 1px solid transparent;
   color: #333333;
@@ -3824,9 +3824,9 @@ body #wrapper {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3399cc', endColorstr='#ff85c2e0', GradientType=0);
 }
-/* -----------------------------------------
+-----------------------------------------
    Pagination and pagers
------------------------------------------ */
+-----------------------------------------
 .pagination {
   height: auto;
   margin: 0 0 18px 0;
@@ -3876,9 +3876,9 @@ body #wrapper {
   border: 1px solid #a3a3a3;
   background: #e8e6e6;
 }
-/* -----------------------------------------
+-----------------------------------------
    Carousel
------------------------------------------ */
+-----------------------------------------
 .carousel .carousel-control.left {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
@@ -3950,9 +3950,9 @@ body #wrapper {
 .carousel.vertical .active.left {
   top: -100%;
 }
-/* -----------------------------------------
+-----------------------------------------
    Carousel dot style indicators
------------------------------------------ */
+-----------------------------------------
 .dotstyle {
   display: inline-block;
   margin: 0;
@@ -3994,7 +3994,7 @@ body #wrapper {
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.3);
   text-indent: -999em;
-  /* make the text accessible to screen readers */
+  make the text accessible to screen readers
   cursor: pointer;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.7);
@@ -4021,9 +4021,9 @@ body #wrapper {
   transform: scale(0.4);
   background-color: white;
 }
-/* -----------------------------------------
+-----------------------------------------
    Labels
------------------------------------------ */
+-----------------------------------------
 .label {
   padding: 4px 7px 5px;
   display: inline-block;
@@ -4068,9 +4068,9 @@ body #wrapper {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec8765', endColorstr='#ffed7a53', GradientType=0);
   border-color: #ec693c;
 }
-/* -----------------------------------------
+-----------------------------------------
    Badges
------------------------------------------ */
+-----------------------------------------
 .badge {
   padding: 5px 8px;
   border: 1px solid transparent;
@@ -4112,9 +4112,9 @@ body #wrapper {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff3f3f3', GradientType=0);
   border-color: #c4c4c4;
 }
-/* -----------------------------------------
+-----------------------------------------
    Forms
------------------------------------------ */
+-----------------------------------------
 .form-horizontal .form-group .control-label,
 .form-inline .form-group .control-label {
   font-weight: normal;
@@ -4324,9 +4324,9 @@ body #wrapper {
   font-size: 13px;
   padding-left: 3px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Input group
------------------------------------------ */
+-----------------------------------------
 .input-group .input-group-btn .btn {
   padding: 6px 12px;
   border: 1px solid #c4c4c4;
@@ -4334,9 +4334,9 @@ body #wrapper {
 .input-group .input-group-btn .btn.btn-sm {
   padding: 5px 10px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Input sizes
------------------------------------------ */
+-----------------------------------------
 .input-mini {
   width: 60px!important;
 }
@@ -4356,9 +4356,9 @@ body #wrapper {
   width: 100%;
   display: block;
 }
-/* -----------------------------------------
+-----------------------------------------
    Checkboxes and radios
------------------------------------------ */
+-----------------------------------------
 .radio,
 .checkbox {
   font-weight: normal;
@@ -4485,7 +4485,7 @@ div.toggle-custom.toggle-inline {
   float: left;
   margin-right: 10px;
 }
-/* Custom skin */
+Custom skin
 div.checkbox-custom {
   position: relative;
   margin-top: 8px;
@@ -4633,16 +4633,16 @@ div.checkbox-custom.checkbox-inline {
   height: 8px;
   background-color: #808080;
   border-radius: 50px;
-  /* -webkit-box-shadow: 0px 0px 1px #444;
-                box-shadow: 0px 0px 1px #444; */
+  -webkit-box-shadow: 0px 0px 1px #444;
+                box-shadow: 0px 0px 1px #444;
 }
 .radio-custom.radio-inline {
   padding-top: 0;
   margin-top: 8px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Tables
------------------------------------------ */
+-----------------------------------------
 .table .checkbox,
 .table .radio,
 .table .checkbox-custom,
@@ -4681,9 +4681,9 @@ div.checkbox-custom.checkbox-inline {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* -----------------------------------------
+-----------------------------------------
    Highlight rows (tables, list and etc )
------------------------------------------ */
+-----------------------------------------
 .highlight {
   background: #e5f3fa;
 }
@@ -4693,9 +4693,9 @@ div.checkbox-custom.checkbox-inline {
 .highlight:hover {
   background: #d0e9f6 !important;
 }
-/* -----------------------------------------
+-----------------------------------------
    Datatables row fix
------------------------------------------ */
+-----------------------------------------
 .dataTables_wrapper .row {
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -4710,9 +4710,9 @@ div.checkbox-custom.checkbox-inline {
   margin-top: -5px;
   float: right;
 }
-/* -----------------------------------------
+-----------------------------------------
    Pricing tables
------------------------------------------ */
+-----------------------------------------
 .pricing-table {
   position: relative;
   background: #ffffff;
@@ -4856,9 +4856,9 @@ div.checkbox-custom.checkbox-inline {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffdedd7', endColorstr='#fffad7a7', GradientType=0);
   border: 1px solid #f4ac47;
 }
-/* -----------------------------------------
+-----------------------------------------
    Seperators
------------------------------------------ */
+-----------------------------------------
 .seperator {
   text-align: center;
   width: 100%;
@@ -4872,9 +4872,9 @@ div.checkbox-custom.checkbox-inline {
 .seperator hr {
   margin-top: -10px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Email app styles
------------------------------------------ */
+-----------------------------------------
 #email-app-wrapper {
   position: relative;
   float: left;
@@ -5162,9 +5162,9 @@ div.checkbox-custom.checkbox-inline {
 #email-content .email-wrapper .email-write:after {
   clear: both;
 }
-/* -----------------------------------------
+-----------------------------------------
    Gallery page
------------------------------------------ */
+-----------------------------------------
 div.gallery-upload {
   overflow: hidden;
   position: relative;
@@ -5202,9 +5202,9 @@ div.gallery-upload .dropzone .dz-message:after {
   float: right;
   margin-top: -2px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Timeline
------------------------------------------ */
+-----------------------------------------
 .timeline {
   list-style: none;
   padding-left: 0;
@@ -5369,9 +5369,9 @@ div.gallery-upload .dropzone .dz-message:after {
 .timeline-load-more-btn i {
   margin-right: 5px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Profile
------------------------------------------ */
+-----------------------------------------
 .profile h5 {
   font-size: 16px;
 }
@@ -5448,9 +5448,9 @@ div.gallery-upload .dropzone .dz-message:after {
 .profile .social dt i {
   margin-right: 10px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Progressbars stats
------------------------------------------ */
+-----------------------------------------
 .progressbars-stats li {
   margin-bottom: 10px;
 }
@@ -5490,9 +5490,9 @@ div.gallery-upload .dropzone .dz-message:after {
   content: '$';
   margin-right: 5px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Invoice page
------------------------------------------ */
+-----------------------------------------
 .invoice {
   position: relative;
 }
@@ -5580,9 +5580,9 @@ div.gallery-upload .dropzone .dz-message:after {
   margin-left: 20px;
   margin-top: 10px;
 }
-/* -----------------------------------------
+-----------------------------------------
    FAQ page
------------------------------------------ */
+-----------------------------------------
 .faq-search {
   position: relative;
   margin-top: -15px;
@@ -5648,9 +5648,9 @@ div.gallery-upload .dropzone .dz-message:after {
   display: inline-block;
   color: #666;
 }
-/* -----------------------------------------
+-----------------------------------------
    Chart shortcuts
------------------------------------------ */
+-----------------------------------------
 .chartShortcuts {
   color: #666666;
   width: 100%;
@@ -5686,9 +5686,9 @@ div.gallery-upload .dropzone .dz-message:after {
   padding-bottom: 10px;
   padding-left: 10px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Recent comments
------------------------------------------ */
+-----------------------------------------
 .recent-comments {
   margin-bottom: 0;
 }
@@ -5739,9 +5739,9 @@ div.gallery-upload .dropzone .dz-message:after {
 .recent-comments li p {
   margin-top: 2px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Messages layout
------------------------------------------ */
+-----------------------------------------
 .messages {
   position: relative;
   list-style: none;
@@ -5837,9 +5837,9 @@ div.gallery-upload .dropzone .dz-message:after {
   height: 17px;
   background: url(../img/icons/arrow-right.png) no-repeat;
 }
-/* -----------------------------------------
+-----------------------------------------
    Spark stats widget
------------------------------------------ */
+-----------------------------------------
 .sparkStats {
   position: relative;
   width: 100%;
@@ -5873,7 +5873,7 @@ div.gallery-upload .dropzone .dz-message:after {
 .sparkStats ul li span:first-child {
   margin-right: 15px;
 }
-/*Reminder*/
+Reminder
 .reminder {
   position: relative;
 }
@@ -5925,9 +5925,9 @@ div.gallery-upload .dropzone .dz-message:after {
   float: left;
   margin-top: 13px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Todo Widget
------------------------------------------ */
+-----------------------------------------
 .todo-widget {
   position: relative;
 }
@@ -6034,9 +6034,9 @@ div.gallery-upload .dropzone .dz-message:after {
   width: 100%;
   height: 40px;
 }
-/* -----------------------------------------
+-----------------------------------------
    Instagram widget
------------------------------------------ */
+-----------------------------------------
 .instagram-widget:before,
 .instagram-widget:after {
   content: " ";
@@ -6109,9 +6109,9 @@ div.gallery-upload .dropzone .dz-message:after {
   color: #1f5c7a;
   text-decoration: none;
 }
-/* -----------------------------------------
+-----------------------------------------
    Twitter widget
------------------------------------------ */
+-----------------------------------------
 .twitter-widget:before,
 .twitter-widget:after {
   content: " ";
@@ -6184,9 +6184,9 @@ div.gallery-upload .dropzone .dz-message:after {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff3f3f3', GradientType=0);
 }
-/* -----------------------------------------
+-----------------------------------------
    Recent activity
------------------------------------------ */
+-----------------------------------------
 .activity {
   position: relative;
   list-style: none;
@@ -6226,14 +6226,14 @@ div.gallery-upload .dropzone .dz-message:after {
   font-size: 11px;
   color: #999999;
 }
-/* -----------------------------------------
+-----------------------------------------
    Responsive media queries
------------------------------------------ */
-/* -----------------------------------------
+-----------------------------------------
+-----------------------------------------
    Desktops
------------------------------------------ */
+-----------------------------------------
 @media all and (max-width: 1280px) {
-  /*------------- Sparks in panel -------------*/
+  ------------- Sparks in panel -------------
   .panel .spark {
     margin-left: 0;
   }
@@ -6253,9 +6253,9 @@ div.gallery-upload .dropzone .dz-message:after {
     margin-right: 10px;
   }
 }
-/* -----------------------------------------
+-----------------------------------------
    Ipad 3/4
------------------------------------------ */
+-----------------------------------------
 @media all and (max-width: 1024px) {
   .panel .spark {
     margin-left: auto;
@@ -6275,11 +6275,11 @@ div.gallery-upload .dropzone .dz-message:after {
     display: none;
   }
 }
-/* -----------------------------------------
+-----------------------------------------
    Most Tablets and some phones
------------------------------------------ */
+-----------------------------------------
 @media all and (max-width: 991px) {
-  /* ------------------ Forms --------------------*/
+  ------------------ Forms --------------------
   .form-group .row .input-icon,
   .form-group .row .input-group {
     margin-bottom: 10px;
@@ -6290,11 +6290,11 @@ div.gallery-upload .dropzone .dz-message:after {
   .form-group .row [class*=" col-"]:last-child {
     margin-bottom: 0;
   }
-  /* ------------------ Dual list --------------------*/
+  ------------------ Dual list --------------------
   .bootstrap-duallistbox-container .box2 {
     margin-top: 10px;
   }
-  /* ------------------ Datatables --------------------*/
+  ------------------ Datatables --------------------
   .table-responsive .dataTables_wrapper {
     padding-top: 10px;
   }
@@ -6332,17 +6332,17 @@ div.gallery-upload .dropzone .dz-message:after {
   .dataTables_wrapper .dataTables_paginate .pagination {
     float: none;
   }
-  /* ------------------ Profile --------------------*/
+  ------------------ Profile --------------------
   .profile-name {
     text-align: center;
     margin-bottom: 10px;
   }
 }
-/* -----------------------------------------
+-----------------------------------------
    Most phones
------------------------------------------ */
+-----------------------------------------
 @media all and (max-width: 767px) {
-  /* ------------------ Header --------------------*/
+  ------------------ Header --------------------
   #app_top .navbar-no-collapse {
     float: left;
     width: 100%;
@@ -6362,11 +6362,11 @@ div.gallery-upload .dropzone .dz-message:after {
   .heading .breadcrumb {
     display: none;
   }
-  /* ------------------ Center modal --------------------*/
+  ------------------ Center modal --------------------
   .modal-dialog-center {
     width: 100%;
   }
-  /* ------------------ Email app --------------------*/
+  ------------------ Email app --------------------
   #email-content .email-wrapper .email-toolbar .email-pager {
     width: 100%;
     padding-left: 0;
@@ -6381,16 +6381,16 @@ div.gallery-upload .dropzone .dz-message:after {
     text-align: center;
   }
 }
-/* -----------------------------------------
+-----------------------------------------
    Small devices
------------------------------------------ */
+-----------------------------------------
 @media all and (max-width: 640px) {
-  /* ------------------ Login and error --------------------*/
+  ------------------ Login and error --------------------
   .login-page .login-panel,
   .error-page .error-panel {
     margin-top: 50px;
   }
-  /* ------------------ Full calendar --------------------*/
+  ------------------ Full calendar --------------------
   .fc-toolbar .fc-left,
   .fc-toolbar .fc-center,
   .fc-toolbar .fc-right {
@@ -6413,14 +6413,14 @@ div.gallery-upload .dropzone .dz-message:after {
     border-top: 1px solid #c4c4c4;
   }
 }
-/* -----------------------------------------
+-----------------------------------------
    Small devices most phones
------------------------------------------ */
+-----------------------------------------
 @media all and (max-width: 550px) {
   #app_top .navbar .navbar-nav > li.dropdown {
     display: none;
   }
-  /* ------------------ Footer --------------------*/
+  ------------------ Footer --------------------
   #footer {
     text-align: center;
     height: 70px;
@@ -6429,14 +6429,14 @@ div.gallery-upload .dropzone .dz-message:after {
   #footer .pull-right {
     float: none !important;
   }
-  /* ------------------ Minor --------------------*/
+  ------------------ Minor --------------------
   .dropzone {
     overflow: hidden;
   }
   .md-editor .btn-group {
     margin-bottom: 5px;
   }
-  /* ------------------ Invoice --------------------*/
+  ------------------ Invoice --------------------
   .invoice .you,
   .invoice .client {
     float: none;
@@ -6448,7 +6448,7 @@ div.gallery-upload .dropzone .dz-message:after {
     margin-top: 15px;
     text-align: center;
   }
-  /* ------------------ Error page --------------------*/
+  ------------------ Error page --------------------
   .error-page > .error-container {
     width: 380px !important;
   }
@@ -6458,35 +6458,35 @@ div.gallery-upload .dropzone .dz-message:after {
     display: none;
   }
 }
-/* -----------------------------------------
+-----------------------------------------
    Small devices old phones
------------------------------------------ */
+-----------------------------------------
 @media all and (max-width: 360px) {
   .heading .search {
     display: none;
   }
-  /* ------------------ Error page --------------------*/
+  ------------------ Error page --------------------
   .error-page > .error-container {
     width: 300px !important;
   }
 }
-/* -----------------------------------------
+-----------------------------------------
    Crapy phones very old
------------------------------------------ */
+-----------------------------------------
 @media all and (max-width: 320px) {
-  /* ------------------ Navbar --------------------*/
+  ------------------ Navbar --------------------
   .page-navbar .navbar-no-collapse {
     padding-left: 5px;
     padding-right: 5px;
   }
-  /* ------------------ Login --------------------*/
+  ------------------ Login --------------------
   .login-page > .login-container {
     width: 300px !important;
   }
 }
-/* -----------------------------------------
+-----------------------------------------
    Print styles
------------------------------------------ */
+-----------------------------------------
 @media print {
   .row.printable {
     display: block !important;
@@ -6525,3 +6525,4 @@ div.gallery-upload .dropzone .dz-message:after {
     display: none;
   }
 }
+ */ */

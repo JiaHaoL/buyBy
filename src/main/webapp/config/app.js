@@ -29,16 +29,8 @@
                templateUrl: 'html/main.html',
                controller: 'MainController'
              })
-             .when('/2w/', {
+             .when('/admin/:name/:pwd', {
                templateUrl: 'html/ClassApp.html',
-               controller: 'MainController'
-             })
-             .when('/detail/:pk', {
-               templateUrl: 'html/detail.html',
-               controller: 'MainController'
-             })
-             .when('/StudentTj/:CLASSID/:COURSEID', {
-               templateUrl: 'html/ClassApp_StudentTj.html',
                controller: 'MainController'
              })
            .otherwise({

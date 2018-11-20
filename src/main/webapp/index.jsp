@@ -77,12 +77,12 @@ if(userIno == null){
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	
-    <title>2w</title>
+    <title>buyBy</title>
     <base href="<%=basePath %>" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://cdn.sjedu.cn/js/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://resource.cloud.smartercampus.cn/plugin/bootstrap/4.1.1/bootstrap.min.css" >
 	<link href="assets/css/style.css" rel="stylesheet">
-	<link href="assets/css/main.css" rel="stylesheet">
+	
 	
 	
 	
@@ -107,7 +107,8 @@ if(userIno == null){
   </body>
   
   <script type="text/javascript" src="https://cdn.sjedu.cn/js/jquery/1.11.3/jquery.min.js"></script> 
-  <script type="text/javascript" src="https://cdn.sjedu.cn/js/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="http://resource.cloud.smartercampus.cn/plugin/bootstrap/4.1.1/popper.min.js" ></script>
+  <script src="http://resource.cloud.smartercampus.cn/plugin/bootstrap/4.1.1/bootstrap.min.js" ></script>
   <script type="text/javascript" src="https://cdn.sjedu.cn/js/angular/1.2.0/angular.min.js"></script>
   <script type="text/javascript" src="https://cdn.sjedu.cn/js/angular/1.2.0/angular-route.min.js"></script>
   <script type="text/javascript" src="https://cdn.sjedu.cn/js/util.js?v=5.1"></script>
